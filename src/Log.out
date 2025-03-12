@@ -1,0 +1,384 @@
+STAR version=2.7.3a
+STAR compilation time,server,dir=Tue Oct 8 14:26:19 EDT 2019 vega:/home/dobin/data/STAR/STARcode/STAR.master/source
+##### Command Line:
+STAR --runThreadN 16 --runMode genomeGenerate --genomeDir /gpfs/group/jin/ref_genomes/asun/star/ --genomeFastaFiles /gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa --sjdbGTFfile /gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf --sjdbOverhang 149
+##### Initial USER parameters from Command Line:
+###### All USER parameters from Command Line:
+runThreadN                    16     ~RE-DEFINED
+runMode                       genomeGenerate     ~RE-DEFINED
+genomeDir                     /gpfs/group/jin/ref_genomes/asun/star/     ~RE-DEFINED
+genomeFastaFiles              /gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa        ~RE-DEFINED
+sjdbGTFfile                   /gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf     ~RE-DEFINED
+sjdbOverhang                  149     ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runMode                           genomeGenerate
+runThreadN                        16
+genomeDir                         /gpfs/group/jin/ref_genomes/asun/star/
+genomeFastaFiles                  /gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa   
+sjdbGTFfile                       /gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf
+sjdbOverhang                      149
+
+-------------------------------
+##### Final effective command line:
+STAR   --runMode genomeGenerate   --runThreadN 16   --genomeDir /gpfs/group/jin/ref_genomes/asun/star/   --genomeFastaFiles /gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa      --sjdbGTFfile /gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf   --sjdbOverhang 149
+----------------------------------------
+
+Finished loading and checking parameters
+Mar 11 21:09:32 ... starting to generate Genome files
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 0  "chr1" chrStart: 0
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 1  "chr10" chrStart: 195559424
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 2  "chr11" chrStart: 326369280
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 3  "chr12" chrStart: 448528384
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 4  "chr13" chrStart: 568852480
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 5  "chr14" chrStart: 689438720
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 6  "chr15" chrStart: 814481408
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 7  "chr16" chrStart: 918552576
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 8  "chr17" chrStart: 1016856576
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 9  "chr18" chrStart: 1112014848
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 10  "chr19" chrStart: 1202978816
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 11  "chr1_GL456210_random" chrStart: 1264582656
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 12  "chr1_GL456211_random" chrStart: 1264844800
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 13  "chr1_GL456212_random" chrStart: 1265106944
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 14  "chr1_GL456213_random" chrStart: 1265369088
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 15  "chr1_GL456221_random" chrStart: 1265631232
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 16  "chr2" chrStart: 1265893376
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 17  "chr3" chrStart: 1448083456
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 18  "chr4" chrStart: 1608253440
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 19  "chr4_GL456216_random" chrStart: 1765015552
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 20  "chr4_GL456350_random" chrStart: 1765277696
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 21  "chr4_JH584292_random" chrStart: 1765539840
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 22  "chr4_JH584293_random" chrStart: 1765801984
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 23  "chr4_JH584294_random" chrStart: 1766064128
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 24  "chr4_JH584295_random" chrStart: 1766326272
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 25  "chr5" chrStart: 1766588416
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 26  "chr5_GL456354_random" chrStart: 1918631936
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 27  "chr5_JH584296_random" chrStart: 1918894080
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 28  "chr5_JH584297_random" chrStart: 1919156224
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 29  "chr5_JH584298_random" chrStart: 1919418368
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 30  "chr5_JH584299_random" chrStart: 1919680512
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 31  "chr6" chrStart: 1920729088
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 32  "chr7" chrStart: 2070675456
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 33  "chr7_GL456219_random" chrStart: 2216165376
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 34  "chr8" chrStart: 2216427520
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 35  "chr9" chrStart: 2345926656
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 36  "chrM" chrStart: 2470707200
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 37  "chrUn_GL456239" chrStart: 2470969344
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 38  "chrUn_GL456359" chrStart: 2471231488
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 39  "chrUn_GL456360" chrStart: 2471493632
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 40  "chrUn_GL456366" chrStart: 2471755776
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 41  "chrUn_GL456367" chrStart: 2472017920
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 42  "chrUn_GL456368" chrStart: 2472280064
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 43  "chrUn_GL456370" chrStart: 2472542208
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 44  "chrUn_GL456372" chrStart: 2472804352
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 45  "chrUn_GL456378" chrStart: 2473066496
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 46  "chrUn_GL456379" chrStart: 2473328640
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 47  "chrUn_GL456381" chrStart: 2473590784
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 48  "chrUn_GL456382" chrStart: 2473852928
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 49  "chrUn_GL456383" chrStart: 2474115072
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 50  "chrUn_GL456385" chrStart: 2474377216
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 51  "chrUn_GL456387" chrStart: 2474639360
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 52  "chrUn_GL456389" chrStart: 2474901504
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 53  "chrUn_GL456390" chrStart: 2475163648
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 54  "chrUn_GL456392" chrStart: 2475425792
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 55  "chrUn_GL456393" chrStart: 2475687936
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 56  "chrUn_GL456394" chrStart: 2475950080
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 57  "chrUn_GL456396" chrStart: 2476212224
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 58  "chrUn_JH584304" chrStart: 2476474368
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 59  "chrX" chrStart: 2476736512
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 60  "chrX_GL456233_random" chrStart: 2647916544
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 61  "chrY" chrStart: 2648440832
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 62  "chrY_JH584300_random" chrStart: 2740191232
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 63  "chrY_JH584301_random" chrStart: 2740453376
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 64  "chrY_JH584302_random" chrStart: 2740715520
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 65  "chrY_JH584303_random" chrStart: 2740977664
+/gpfs/group/jin/ref_genomes/asun/bismark/mm10_no_alt_analysis_ENCODE_with_chrL.fa : chr # 66  "chrL" chrStart: 2741239808
+Estimated genome size=3040501952   2741501952   299000000
+GstrandBit=32
+Number of SA indices: 5305466296
+Mar 11 21:11:05 ... starting to sort Suffix Array. This may take a long time...
+Number of chunks: 50;   chunks size limit: 956886600 bytes
+Mar 11 21:11:25 ... sorting Suffix Array chunks and saving them to disk...
+Writing 749713864 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_0 ; empty space on disk = 53401432883200 bytes ... done
+Writing 743947584 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_4 ; empty space on disk = 53400682627072 bytes ... done
+Writing 731478688 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_7 ; empty space on disk = 53399938662400 bytes ... done
+Writing 844318528 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_3 ; empty space on disk = 53399206756352 bytes ... done
+Writing 810274512 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_9 ; empty space on disk = 53398362128384 bytes ... done
+Writing 853481976 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_10 ; empty space on disk = 53398661496832 bytes ... done
+Writing 821657024 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_13 ; empty space on disk = 53397807431680 bytes ... done
+Writing 850038704 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_2 ; empty space on disk = 53396985348096 bytes ... done
+Writing 921949840 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_8 ; empty space on disk = 53396134952960 bytes ... done
+Writing 910754192 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_5 ; empty space on disk = 53395212730368 bytes ... done
+Writing 841603176 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_11 ; empty space on disk = 53394301517824 bytes ... done
+Writing 934490744 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_1 ; empty space on disk = 53393459511296 bytes ... done
+Writing 897901864 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_6 ; empty space on disk = 53392524705792 bytes ... done
+Writing 942017712 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_12 ; empty space on disk = 53391626600448 bytes ... done
+Writing 861326160 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_15 ; empty space on disk = 53390684454912 bytes ... done
+Writing 954732160 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_14 ; empty space on disk = 53389823049728 bytes ... done
+Writing 879593064 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_16 ; empty space on disk = 53386828840960 bytes ... done
+Writing 756236568 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_17 ; empty space on disk = 53385876209664 bytes ... done
+Writing 744179424 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_21 ; empty space on disk = 53385119662080 bytes ... done
+Writing 752140192 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_22 ; empty space on disk = 53384375173120 bytes ... done
+Writing 846325200 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_26 ; empty space on disk = 53383622819840 bytes ... done
+Writing 860826560 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_19 ; empty space on disk = 53382776094720 bytes ... done
+Writing 844325840 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_29 ; empty space on disk = 53381915213824 bytes ... done
+Writing 818554992 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_18 ; empty space on disk = 53381070585856 bytes ... done
+Writing 866148824 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_25 ; empty space on disk = 53380251648000 bytes ... done
+Writing 882912256 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_23 ; empty space on disk = 53379384999936 bytes ... done
+Writing 880332032 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_28 ; empty space on disk = 53378501574656 bytes ... done
+Writing 901972496 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_24 ; empty space on disk = 53377620770816 bytes ... done
+Writing 955762904 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_20 ; empty space on disk = 53376718471168 bytes ... done
+Writing 851407928 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_30 ; empty space on disk = 53375762694144 bytes ... done
+Writing 863392848 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_31 ; empty space on disk = 53374910726144 bytes ... done
+Writing 927761040 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_27 ; empty space on disk = 53374047223808 bytes ... done
+Writing 845647800 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_32 ; empty space on disk = 53371271643136 bytes ... done
+Writing 867412800 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_33 ; empty space on disk = 53370425442304 bytes ... done
+Writing 811027080 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_34 ; empty space on disk = 53369557745664 bytes ... done
+Writing 775994984 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_37 ; empty space on disk = 53368746147840 bytes ... done
+Writing 762715480 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_46 ; empty space on disk = 53367969677312 bytes ... done
+Writing 830677880 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_35 ; empty space on disk = 53367206838272 bytes ... done
+Writing 799424232 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_40 ; empty space on disk = 53366375841792 bytes ... done
+Writing 825287672 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_38 ; empty space on disk = 53365576302592 bytes ... done
+Writing 817100128 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_43 ; empty space on disk = 53364750548992 bytes ...Writing 817781072 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_45 ; empty space on disk = 53363997147136 bytes ... done
+ done
+Writing 845473664 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_41 ; empty space on disk = 53363119489024 bytes ... done
+Writing 879349304 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_39 ; empty space on disk = 53362273812480 bytes ... done
+Writing 900730024 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_47 ; empty space on disk = 53361394057216 bytes ... done
+Writing 889293312 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_44 ; empty space on disk = 53359189426176 bytes ...Writing 928675200 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_42 ; empty space on disk = 53358903689216 bytes ... done
+ done
+Writing 882833784 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_36 ; empty space on disk = 53357370671104 bytes ... done
+Writing 861635832 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_48 ; empty space on disk = 53355113611264 bytes ... done
+Writing 801111224 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA_49 ; empty space on disk = 53354251681792 bytes ... done
+Mar 11 21:23:04 ... loading chunks from disk, packing SA...
+Mar 11 21:24:27 ... finished generating suffix array
+Mar 11 21:24:27 ... generating Suffix Array index
+Mar 11 21:28:38 ... completed Suffix Array index
+Mar 11 21:28:38 ..... processing annotations GTF
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00002' not found in Genome fasta files for line:
+ERCC-00002	spikein	exon	1	1061	.	+	.	gene_id "gSpikein_ERCC-00002"; transcript_id "tSpikein_ERCC-00002";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00003' not found in Genome fasta files for line:
+ERCC-00003	spikein	exon	1	1023	.	+	.	gene_id "gSpikein_ERCC-00003"; transcript_id "tSpikein_ERCC-00003";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00004' not found in Genome fasta files for line:
+ERCC-00004	spikein	exon	1	523	.	+	.	gene_id "gSpikein_ERCC-00004"; transcript_id "tSpikein_ERCC-00004";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00007' not found in Genome fasta files for line:
+ERCC-00007	spikein	exon	1	1135	.	+	.	gene_id "gSpikein_ERCC-00007"; transcript_id "tSpikein_ERCC-00007";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00009' not found in Genome fasta files for line:
+ERCC-00009	spikein	exon	1	984	.	+	.	gene_id "gSpikein_ERCC-00009"; transcript_id "tSpikein_ERCC-00009";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00012' not found in Genome fasta files for line:
+ERCC-00012	spikein	exon	1	994	.	+	.	gene_id "gSpikein_ERCC-00012"; transcript_id "tSpikein_ERCC-00012";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00013' not found in Genome fasta files for line:
+ERCC-00013	spikein	exon	1	808	.	+	.	gene_id "gSpikein_ERCC-00013"; transcript_id "tSpikein_ERCC-00013";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00014' not found in Genome fasta files for line:
+ERCC-00014	spikein	exon	1	1957	.	+	.	gene_id "gSpikein_ERCC-00014"; transcript_id "tSpikein_ERCC-00014";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00016' not found in Genome fasta files for line:
+ERCC-00016	spikein	exon	1	844	.	+	.	gene_id "gSpikein_ERCC-00016"; transcript_id "tSpikein_ERCC-00016";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00017' not found in Genome fasta files for line:
+ERCC-00017	spikein	exon	1	1136	.	+	.	gene_id "gSpikein_ERCC-00017"; transcript_id "tSpikein_ERCC-00017";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00018' not found in Genome fasta files for line:
+ERCC-00018	spikein	exon	1	1032	.	+	.	gene_id "gSpikein_ERCC-00018"; transcript_id "tSpikein_ERCC-00018";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00019' not found in Genome fasta files for line:
+ERCC-00019	spikein	exon	1	644	.	+	.	gene_id "gSpikein_ERCC-00019"; transcript_id "tSpikein_ERCC-00019";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00022' not found in Genome fasta files for line:
+ERCC-00022	spikein	exon	1	751	.	+	.	gene_id "gSpikein_ERCC-00022"; transcript_id "tSpikein_ERCC-00022";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00023' not found in Genome fasta files for line:
+ERCC-00023	spikein	exon	1	273	.	+	.	gene_id "gSpikein_ERCC-00023"; transcript_id "tSpikein_ERCC-00023";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00024' not found in Genome fasta files for line:
+ERCC-00024	spikein	exon	1	536	.	+	.	gene_id "gSpikein_ERCC-00024"; transcript_id "tSpikein_ERCC-00024";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00025' not found in Genome fasta files for line:
+ERCC-00025	spikein	exon	1	1994	.	+	.	gene_id "gSpikein_ERCC-00025"; transcript_id "tSpikein_ERCC-00025";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00028' not found in Genome fasta files for line:
+ERCC-00028	spikein	exon	1	1130	.	+	.	gene_id "gSpikein_ERCC-00028"; transcript_id "tSpikein_ERCC-00028";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00031' not found in Genome fasta files for line:
+ERCC-00031	spikein	exon	1	1138	.	+	.	gene_id "gSpikein_ERCC-00031"; transcript_id "tSpikein_ERCC-00031";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00033' not found in Genome fasta files for line:
+ERCC-00033	spikein	exon	1	2022	.	+	.	gene_id "gSpikein_ERCC-00033"; transcript_id "tSpikein_ERCC-00033";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00034' not found in Genome fasta files for line:
+ERCC-00034	spikein	exon	1	1019	.	+	.	gene_id "gSpikein_ERCC-00034"; transcript_id "tSpikein_ERCC-00034";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00035' not found in Genome fasta files for line:
+ERCC-00035	spikein	exon	1	1130	.	+	.	gene_id "gSpikein_ERCC-00035"; transcript_id "tSpikein_ERCC-00035";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00039' not found in Genome fasta files for line:
+ERCC-00039	spikein	exon	1	740	.	+	.	gene_id "gSpikein_ERCC-00039"; transcript_id "tSpikein_ERCC-00039";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00040' not found in Genome fasta files for line:
+ERCC-00040	spikein	exon	1	744	.	+	.	gene_id "gSpikein_ERCC-00040"; transcript_id "tSpikein_ERCC-00040";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00041' not found in Genome fasta files for line:
+ERCC-00041	spikein	exon	1	1122	.	+	.	gene_id "gSpikein_ERCC-00041"; transcript_id "tSpikein_ERCC-00041";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00042' not found in Genome fasta files for line:
+ERCC-00042	spikein	exon	1	1023	.	+	.	gene_id "gSpikein_ERCC-00042"; transcript_id "tSpikein_ERCC-00042";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00043' not found in Genome fasta files for line:
+ERCC-00043	spikein	exon	1	1023	.	+	.	gene_id "gSpikein_ERCC-00043"; transcript_id "tSpikein_ERCC-00043";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00044' not found in Genome fasta files for line:
+ERCC-00044	spikein	exon	1	1156	.	+	.	gene_id "gSpikein_ERCC-00044"; transcript_id "tSpikein_ERCC-00044";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00046' not found in Genome fasta files for line:
+ERCC-00046	spikein	exon	1	522	.	+	.	gene_id "gSpikein_ERCC-00046"; transcript_id "tSpikein_ERCC-00046";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00048' not found in Genome fasta files for line:
+ERCC-00048	spikein	exon	1	992	.	+	.	gene_id "gSpikein_ERCC-00048"; transcript_id "tSpikein_ERCC-00048";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00051' not found in Genome fasta files for line:
+ERCC-00051	spikein	exon	1	274	.	+	.	gene_id "gSpikein_ERCC-00051"; transcript_id "tSpikein_ERCC-00051";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00053' not found in Genome fasta files for line:
+ERCC-00053	spikein	exon	1	1023	.	+	.	gene_id "gSpikein_ERCC-00053"; transcript_id "tSpikein_ERCC-00053";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00054' not found in Genome fasta files for line:
+ERCC-00054	spikein	exon	1	274	.	+	.	gene_id "gSpikein_ERCC-00054"; transcript_id "tSpikein_ERCC-00054";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00057' not found in Genome fasta files for line:
+ERCC-00057	spikein	exon	1	1021	.	+	.	gene_id "gSpikein_ERCC-00057"; transcript_id "tSpikein_ERCC-00057";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00058' not found in Genome fasta files for line:
+ERCC-00058	spikein	exon	1	1136	.	+	.	gene_id "gSpikein_ERCC-00058"; transcript_id "tSpikein_ERCC-00058";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00059' not found in Genome fasta files for line:
+ERCC-00059	spikein	exon	1	525	.	+	.	gene_id "gSpikein_ERCC-00059"; transcript_id "tSpikein_ERCC-00059";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00060' not found in Genome fasta files for line:
+ERCC-00060	spikein	exon	1	523	.	+	.	gene_id "gSpikein_ERCC-00060"; transcript_id "tSpikein_ERCC-00060";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00061' not found in Genome fasta files for line:
+ERCC-00061	spikein	exon	1	1136	.	+	.	gene_id "gSpikein_ERCC-00061"; transcript_id "tSpikein_ERCC-00061";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00062' not found in Genome fasta files for line:
+ERCC-00062	spikein	exon	1	1023	.	+	.	gene_id "gSpikein_ERCC-00062"; transcript_id "tSpikein_ERCC-00062";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00067' not found in Genome fasta files for line:
+ERCC-00067	spikein	exon	1	644	.	+	.	gene_id "gSpikein_ERCC-00067"; transcript_id "tSpikein_ERCC-00067";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00069' not found in Genome fasta files for line:
+ERCC-00069	spikein	exon	1	1137	.	+	.	gene_id "gSpikein_ERCC-00069"; transcript_id "tSpikein_ERCC-00069";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00071' not found in Genome fasta files for line:
+ERCC-00071	spikein	exon	1	642	.	+	.	gene_id "gSpikein_ERCC-00071"; transcript_id "tSpikein_ERCC-00071";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00073' not found in Genome fasta files for line:
+ERCC-00073	spikein	exon	1	603	.	+	.	gene_id "gSpikein_ERCC-00073"; transcript_id "tSpikein_ERCC-00073";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00074' not found in Genome fasta files for line:
+ERCC-00074	spikein	exon	1	522	.	+	.	gene_id "gSpikein_ERCC-00074"; transcript_id "tSpikein_ERCC-00074";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00075' not found in Genome fasta files for line:
+ERCC-00075	spikein	exon	1	1023	.	+	.	gene_id "gSpikein_ERCC-00075"; transcript_id "tSpikein_ERCC-00075";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00076' not found in Genome fasta files for line:
+ERCC-00076	spikein	exon	1	642	.	+	.	gene_id "gSpikein_ERCC-00076"; transcript_id "tSpikein_ERCC-00076";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00077' not found in Genome fasta files for line:
+ERCC-00077	spikein	exon	1	273	.	+	.	gene_id "gSpikein_ERCC-00077"; transcript_id "tSpikein_ERCC-00077";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00078' not found in Genome fasta files for line:
+ERCC-00078	spikein	exon	1	993	.	+	.	gene_id "gSpikein_ERCC-00078"; transcript_id "tSpikein_ERCC-00078";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00079' not found in Genome fasta files for line:
+ERCC-00079	spikein	exon	1	644	.	+	.	gene_id "gSpikein_ERCC-00079"; transcript_id "tSpikein_ERCC-00079";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00081' not found in Genome fasta files for line:
+ERCC-00081	spikein	exon	1	534	.	+	.	gene_id "gSpikein_ERCC-00081"; transcript_id "tSpikein_ERCC-00081";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00083' not found in Genome fasta files for line:
+ERCC-00083	spikein	exon	1	1022	.	+	.	gene_id "gSpikein_ERCC-00083"; transcript_id "tSpikein_ERCC-00083";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00084' not found in Genome fasta files for line:
+ERCC-00084	spikein	exon	1	994	.	+	.	gene_id "gSpikein_ERCC-00084"; transcript_id "tSpikein_ERCC-00084";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00085' not found in Genome fasta files for line:
+ERCC-00085	spikein	exon	1	844	.	+	.	gene_id "gSpikein_ERCC-00085"; transcript_id "tSpikein_ERCC-00085";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00086' not found in Genome fasta files for line:
+ERCC-00086	spikein	exon	1	1020	.	+	.	gene_id "gSpikein_ERCC-00086"; transcript_id "tSpikein_ERCC-00086";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00092' not found in Genome fasta files for line:
+ERCC-00092	spikein	exon	1	1124	.	+	.	gene_id "gSpikein_ERCC-00092"; transcript_id "tSpikein_ERCC-00092";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00095' not found in Genome fasta files for line:
+ERCC-00095	spikein	exon	1	521	.	+	.	gene_id "gSpikein_ERCC-00095"; transcript_id "tSpikein_ERCC-00095";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00096' not found in Genome fasta files for line:
+ERCC-00096	spikein	exon	1	1107	.	+	.	gene_id "gSpikein_ERCC-00096"; transcript_id "tSpikein_ERCC-00096";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00097' not found in Genome fasta files for line:
+ERCC-00097	spikein	exon	1	523	.	+	.	gene_id "gSpikein_ERCC-00097"; transcript_id "tSpikein_ERCC-00097";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00098' not found in Genome fasta files for line:
+ERCC-00098	spikein	exon	1	1143	.	+	.	gene_id "gSpikein_ERCC-00098"; transcript_id "tSpikein_ERCC-00098";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00099' not found in Genome fasta files for line:
+ERCC-00099	spikein	exon	1	1350	.	+	.	gene_id "gSpikein_ERCC-00099"; transcript_id "tSpikein_ERCC-00099";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00104' not found in Genome fasta files for line:
+ERCC-00104	spikein	exon	1	2022	.	+	.	gene_id "gSpikein_ERCC-00104"; transcript_id "tSpikein_ERCC-00104";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00108' not found in Genome fasta files for line:
+ERCC-00108	spikein	exon	1	1022	.	+	.	gene_id "gSpikein_ERCC-00108"; transcript_id "tSpikein_ERCC-00108";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00109' not found in Genome fasta files for line:
+ERCC-00109	spikein	exon	1	536	.	+	.	gene_id "gSpikein_ERCC-00109"; transcript_id "tSpikein_ERCC-00109";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00111' not found in Genome fasta files for line:
+ERCC-00111	spikein	exon	1	994	.	+	.	gene_id "gSpikein_ERCC-00111"; transcript_id "tSpikein_ERCC-00111";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00112' not found in Genome fasta files for line:
+ERCC-00112	spikein	exon	1	1136	.	+	.	gene_id "gSpikein_ERCC-00112"; transcript_id "tSpikein_ERCC-00112";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00113' not found in Genome fasta files for line:
+ERCC-00113	spikein	exon	1	840	.	+	.	gene_id "gSpikein_ERCC-00113"; transcript_id "tSpikein_ERCC-00113";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00116' not found in Genome fasta files for line:
+ERCC-00116	spikein	exon	1	1991	.	+	.	gene_id "gSpikein_ERCC-00116"; transcript_id "tSpikein_ERCC-00116";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00117' not found in Genome fasta files for line:
+ERCC-00117	spikein	exon	1	1136	.	+	.	gene_id "gSpikein_ERCC-00117"; transcript_id "tSpikein_ERCC-00117";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00120' not found in Genome fasta files for line:
+ERCC-00120	spikein	exon	1	536	.	+	.	gene_id "gSpikein_ERCC-00120"; transcript_id "tSpikein_ERCC-00120";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00123' not found in Genome fasta files for line:
+ERCC-00123	spikein	exon	1	1022	.	+	.	gene_id "gSpikein_ERCC-00123"; transcript_id "tSpikein_ERCC-00123";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00126' not found in Genome fasta files for line:
+ERCC-00126	spikein	exon	1	1118	.	+	.	gene_id "gSpikein_ERCC-00126"; transcript_id "tSpikein_ERCC-00126";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00128' not found in Genome fasta files for line:
+ERCC-00128	spikein	exon	1	1133	.	+	.	gene_id "gSpikein_ERCC-00128"; transcript_id "tSpikein_ERCC-00128";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00130' not found in Genome fasta files for line:
+ERCC-00130	spikein	exon	1	1059	.	+	.	gene_id "gSpikein_ERCC-00130"; transcript_id "tSpikein_ERCC-00130";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00131' not found in Genome fasta files for line:
+ERCC-00131	spikein	exon	1	771	.	+	.	gene_id "gSpikein_ERCC-00131"; transcript_id "tSpikein_ERCC-00131";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00134' not found in Genome fasta files for line:
+ERCC-00134	spikein	exon	1	274	.	+	.	gene_id "gSpikein_ERCC-00134"; transcript_id "tSpikein_ERCC-00134";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00136' not found in Genome fasta files for line:
+ERCC-00136	spikein	exon	1	1033	.	+	.	gene_id "gSpikein_ERCC-00136"; transcript_id "tSpikein_ERCC-00136";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00137' not found in Genome fasta files for line:
+ERCC-00137	spikein	exon	1	537	.	+	.	gene_id "gSpikein_ERCC-00137"; transcript_id "tSpikein_ERCC-00137";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00138' not found in Genome fasta files for line:
+ERCC-00138	spikein	exon	1	1024	.	+	.	gene_id "gSpikein_ERCC-00138"; transcript_id "tSpikein_ERCC-00138";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00142' not found in Genome fasta files for line:
+ERCC-00142	spikein	exon	1	493	.	+	.	gene_id "gSpikein_ERCC-00142"; transcript_id "tSpikein_ERCC-00142";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00143' not found in Genome fasta files for line:
+ERCC-00143	spikein	exon	1	784	.	+	.	gene_id "gSpikein_ERCC-00143"; transcript_id "tSpikein_ERCC-00143";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00144' not found in Genome fasta files for line:
+ERCC-00144	spikein	exon	1	538	.	+	.	gene_id "gSpikein_ERCC-00144"; transcript_id "tSpikein_ERCC-00144";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00145' not found in Genome fasta files for line:
+ERCC-00145	spikein	exon	1	1042	.	+	.	gene_id "gSpikein_ERCC-00145"; transcript_id "tSpikein_ERCC-00145";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00147' not found in Genome fasta files for line:
+ERCC-00147	spikein	exon	1	1023	.	+	.	gene_id "gSpikein_ERCC-00147"; transcript_id "tSpikein_ERCC-00147";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00148' not found in Genome fasta files for line:
+ERCC-00148	spikein	exon	1	494	.	+	.	gene_id "gSpikein_ERCC-00148"; transcript_id "tSpikein_ERCC-00148";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00150' not found in Genome fasta files for line:
+ERCC-00150	spikein	exon	1	743	.	+	.	gene_id "gSpikein_ERCC-00150"; transcript_id "tSpikein_ERCC-00150";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00154' not found in Genome fasta files for line:
+ERCC-00154	spikein	exon	1	537	.	+	.	gene_id "gSpikein_ERCC-00154"; transcript_id "tSpikein_ERCC-00154";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00156' not found in Genome fasta files for line:
+ERCC-00156	spikein	exon	1	494	.	+	.	gene_id "gSpikein_ERCC-00156"; transcript_id "tSpikein_ERCC-00156";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00157' not found in Genome fasta files for line:
+ERCC-00157	spikein	exon	1	1019	.	+	.	gene_id "gSpikein_ERCC-00157"; transcript_id "tSpikein_ERCC-00157";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00158' not found in Genome fasta files for line:
+ERCC-00158	spikein	exon	1	1027	.	+	.	gene_id "gSpikein_ERCC-00158"; transcript_id "tSpikein_ERCC-00158";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00160' not found in Genome fasta files for line:
+ERCC-00160	spikein	exon	1	743	.	+	.	gene_id "gSpikein_ERCC-00160"; transcript_id "tSpikein_ERCC-00160";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00162' not found in Genome fasta files for line:
+ERCC-00162	spikein	exon	1	523	.	+	.	gene_id "gSpikein_ERCC-00162"; transcript_id "tSpikein_ERCC-00162";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00163' not found in Genome fasta files for line:
+ERCC-00163	spikein	exon	1	543	.	+	.	gene_id "gSpikein_ERCC-00163"; transcript_id "tSpikein_ERCC-00163";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00164' not found in Genome fasta files for line:
+ERCC-00164	spikein	exon	1	1022	.	+	.	gene_id "gSpikein_ERCC-00164"; transcript_id "tSpikein_ERCC-00164";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00165' not found in Genome fasta files for line:
+ERCC-00165	spikein	exon	1	872	.	+	.	gene_id "gSpikein_ERCC-00165"; transcript_id "tSpikein_ERCC-00165";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00168' not found in Genome fasta files for line:
+ERCC-00168	spikein	exon	1	1024	.	+	.	gene_id "gSpikein_ERCC-00168"; transcript_id "tSpikein_ERCC-00168";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00170' not found in Genome fasta files for line:
+ERCC-00170	spikein	exon	1	1023	.	+	.	gene_id "gSpikein_ERCC-00170"; transcript_id "tSpikein_ERCC-00170";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'ERCC-00171' not found in Genome fasta files for line:
+ERCC-00171	spikein	exon	1	505	.	+	.	gene_id "gSpikein_ERCC-00171"; transcript_id "tSpikein_ERCC-00171";
+WARNING: while processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: chromosome 'phiX174' not found in Genome fasta files for line:
+phiX174	spikein	exon	1	5386	.	+	.	gene_id "gSpikein_phiX174"; transcript_id "tSpikein_phiX174";
+Processing pGe.sjdbGTFfile=/gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf, found:
+		168110 transcripts
+		860920 exons (non-collapsed)
+		284419 collapsed junctions
+Mar 11 21:28:51 ..... finished GTF processing
+Mar 11 21:28:51   Loaded database junctions from the GTF file: /gpfs/group/jin/ref_genomes/asun/ENCFF871VGR.gtf: 284419 total junctions
+
+WARNING: long repeat for junction # 64393 : chr13 36008518 36189203; left shift = 255; right shift = 29
+WARNING: long repeat for junction # 71915 : chr13 119495135 119609191; left shift = 36; right shift = 255
+WARNING: long repeat for junction # 196545 : chr5 112774527 112775017; left shift = 255; right shift = 69
+WARNING: long repeat for junction # 198897 : chr5 123190235 123190960; left shift = 255; right shift = 19
+WARNING: long repeat for junction # 207988 : chr6 48754635 48755196; left shift = 81; right shift = 255
+WARNING: long repeat for junction # 239814 : chr7 141808196 141810304; left shift = 255; right shift = 255
+Mar 11 21:28:51   Finished preparing junctions
+Mar 11 21:28:51 ..... inserting junctions into the genome indices
+Mar 11 21:29:30   Finished SA search: number of new junctions=284351, old junctions=0
+Mar 11 21:30:36   Finished sorting SA indicesL nInd=169460686
+Genome size with junctions=2826522901  2741501952   85020949
+GstrandBit1=32   GstrandBit=32
+Mar 11 21:32:22   Finished inserting junction indices
+Mar 11 21:32:57   Finished SAi
+Mar 11 21:32:57 ..... finished inserting junctions into genome
+Mar 11 21:32:57 ... writing Genome to disk ...
+Writing 2826522901 bytes into /gpfs/group/jin/ref_genomes/asun/star//Genome ; empty space on disk = 53387195318272 bytes ... done
+SA size in bytes: 22584073804
+Mar 11 21:32:59 ... writing Suffix Array to disk ...
+Writing 22584073804 bytes into /gpfs/group/jin/ref_genomes/asun/star//SA ; empty space on disk = 53384368357376 bytes ... done
+Mar 11 21:33:19 ... writing SAindex to disk
+Writing 8 bytes into /gpfs/group/jin/ref_genomes/asun/star//SAindex ; empty space on disk = 53361000841216 bytes ... done
+Writing 120 bytes into /gpfs/group/jin/ref_genomes/asun/star//SAindex ; empty space on disk = 53361000841216 bytes ... done
+Writing 1565873491 bytes into /gpfs/group/jin/ref_genomes/asun/star//SAindex ; empty space on disk = 53361000841216 bytes ... done
+Mar 11 21:33:23 ..... finished successfully
+DONE: Genome generation, EXITING

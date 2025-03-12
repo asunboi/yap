@@ -3,6 +3,10 @@
 [https://lh3.github.io/2017/11/13/which-human-reference-genome-to-use]  
 [https://www.encodeproject.org/data-standards/reference-sequences/]  
 
+# 03/12/25
+https://www.encodeproject.org/files/ENCFF708YIO/@@download/ENCFF708YIO.tar.gz
+Got chromosome sizes through faSizes for custom reference. Wrote bash script for 
+
 # 03/11/25
 Working with Cassie's data  
 Tried to run star alignment but reads were unmapped (too short) (99%)  

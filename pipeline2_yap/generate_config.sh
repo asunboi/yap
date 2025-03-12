@@ -1,0 +1,1 @@
+/gpfs/home/asun/jin_lab/yap/src/generate_config.sh
