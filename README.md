@@ -29,6 +29,14 @@ Primer_name is in the xlsx/fasta file
 Lane is 3  
 Read_type is R1/R2  
 
+Talked with Ecker Lab, Wubin and Mojar. Wubin built a scaffold incorporated genome and added GTF annotation to it?
+
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/demultiplex/fastq_dataframe.py", line 60, in _parse_v2_fastq_path
+    assert lane in {'L001', 'L002', 'L003', 'L004','L005','L006','L007','L008'}
+AssertionError
+
+Lane has to be L003, rerunning demultiplex.
+
 # 03/11/25
 Working with Cassie's data  
 Tried to run star alignment but reads were unmapped (too short) (99%)  
