@@ -3,6 +3,25 @@
 [https://lh3.github.io/2017/11/13/which-human-reference-genome-to-use]  
 [https://www.encodeproject.org/data-standards/reference-sequences/]  
 
+# 03/13/25
+Arbitrarily renamed input fastq files from S_5_CKDL250004755-1A_22MKYCLT4_L3_1.sub.fq -> TEST-S_5-1-A1_ii1_L003_R1_ii2.fq  
+I'm thinking that if YAP demultiplexes into the corresponding 384 RP anyways, it's good to just give it the novogene fail as input.  
+Gzipped R1/R2 for input into YAP.  
+
+Changed star_genomeGenerate.sbatch.sh to have --sjdbOverhang 100 because yap mapping has its own star alignment rule  
+
+EXITING because of fatal PARAMETERS error: present --sjdbOverhang=100 is not equal to the value at the genome generation step =149
+SOLUTION: 
+
+Mar 13 12:30:18 ...... FATAL ERROR, exiting
+[Thu Mar 13 12:30:18 2025]
+Finished job 491.
+9 of 635 steps (1%) done
+Removing temporary output bam/S_5-5-A1-J21-R2.trimmed_bismark_bt2.filter.bam.
+[Thu Mar 13 12:30:18 2025]
+Error in rule star:  
+
+
 # 03/12/25
 https://www.encodeproject.org/files/ENCFF708YIO/@@download/ENCFF708YIO.tar.gz
 Got chromosome sizes through faSizes for custom reference. Wrote bash script for yap mapping config.  
@@ -36,6 +55,13 @@ Talked with Ecker Lab, Wubin and Mojar. Wubin built a scaffold incorporated geno
 AssertionError
 
 Lane has to be L003, rerunning demultiplex.
+Read has to be actually R1 instead of just 1, etc. Rerunning demultiplex.
+
+demultiplex/*
+
+holy moly the pipeline is so strict it's nuts; input files to yap demultiplex must be gzipped. I'm actually not sure if we even need to do cutadapt before yap demultiplex, mostly because it will do cutadapt on the file anyways; I think it's mainly a QC thing. I'm not sure our input primer_name matters; maybe we can even feed in the whole downsampled file.
+
+
 
 # 03/11/25
 Working with Cassie's data  

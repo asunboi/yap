@@ -7,8 +7,8 @@
 #SBATCH --partition=highmem
 
 yap demultiplex \
---fastq_pattern "/gpfs/home/asun/jin_lab/yap/raw_data/demultiplex/*.fq" \
+--fastq_pattern "/gpfs/home/asun/jin_lab/yap/raw_data/*.fq.gz" \
 -o /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex \
 -j 16 \
 --aligner bismark \
---config_path mct_config.ini
+--config_path /gpfs/home/asun/jin_lab/yap/pipeline2_yap/mct_config.ini
