@@ -1,0 +1,8 @@
+
+EXITING because of FATAL ERROR in reads input: short read sequence line: 0
+Read Name=@lh00134:653:22MKYCLT4:3:1218:41280:4629
+Read Sequence====
+DEF_readNameLengthMax=50000
+DEF_readSeqLengthMax=650
+
+Mar 16 22:42:53 ...... FATAL ERROR, exiting

@@ -1,0 +1,11 @@
+Writing bisulfite genomes out into a single MFA (multi FastA) file
+
+Bisulfite Genome Indexer version v0.20.0 (last modified 26 April 2018)
+
+Step I - Prepare genome folders - completed
+
+
+Use of uninitialized value $first_line in scalar chomp at /gpfs/home/asun/miniforge3/envs/yap/bin/bismark_genome_preparation line 262.
+Use of uninitialized value $fasta_header in substitution (s///) at /gpfs/home/asun/miniforge3/envs/yap/bin/bismark_genome_preparation line 416.
+Use of uninitialized value $fasta_header in concatenation (.) or string at /gpfs/home/asun/miniforge3/envs/yap/bin/bismark_genome_preparation line 421.
+The specified chromosome () file doesn't seem to be in FASTA format as required!

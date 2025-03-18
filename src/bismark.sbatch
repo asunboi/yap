@@ -6,4 +6,4 @@
 #SBATCH --time=40:00:00
 #SBATCH --partition=highmem
 
-bismark_genome_preparation /gpfs/group/jin/ref_genomes/asun/bismark/
+bismark_genome_preparation /gpfs/group/jin/ref_genomes/asun_mm10_w_chrG/

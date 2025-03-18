@@ -1,0 +1,792 @@
+Mapping config file looks good. Here is what will be used in generating Snakefile:
+overlap = 6
+r1_left_cut = 10
+r1_right_cut = 10
+r2_left_cut = 10
+r2_right_cut = 10
+quality_threshold = 20
+length_threshold = 30
+total_read_pairs_min = 1
+total_read_pairs_max = 6000000
+mapq_threshold = 10
+num_upstr_bases = 0
+num_downstr_bases = 2
+compress_level = 5
+dna_cov_min_threshold = 3
+rna_cov_min_threshold = 3
+mc_rate_max_threshold = 0.5
+mc_rate_min_threshold = 0.9
+unmapped_fastq = False
+unmapped_param_str = ''
+mode = 'mct'
+barcode_version = 'V2'
+r1_adapter = 'AGATCGGAAGAGCACACGTCTGAAC'
+r2_adapter = 'AGATCGGAAGAGCGTCGTGTAGGGA'
+bismark_reference = '~/jin_lab/yap/raw_data/references'
+reference_fasta = '~/jin_lab/yap/raw_data/references/mm10_no_alt_analysis_ENCODE_with_chrL.fa'
+star_reference = '~/jin_lab/yap/raw_data/references/star'
+chrom_size_path = '~/jin_lab/yap/raw_data/references/mm10_no_alt_analysis_ENCODE_with_chrL.sizes'
+gtf_path = '~/jin_lab/yap/raw_data/references/ENCFF871VGR.gtf'
+feature_type = 'gene'
+id_type = 'gene_id'
+nome_flag_str = ''
+mc_stat_feature = 'CHN CGN CCC'
+mc_stat_alias = 'mCH mCG mCCC'
+annotation_path = 'None'
+
+768 FASTQ file paths in input
+768 valid fastq names.
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Job stats:
+job                count
+---------------  -------
+demultiplex_0          1
+demultiplex_1          1
+demultiplex_10         1
+demultiplex_100        1
+demultiplex_101        1
+demultiplex_102        1
+demultiplex_103        1
+demultiplex_104        1
+demultiplex_105        1
+demultiplex_106        1
+demultiplex_107        1
+demultiplex_108        1
+demultiplex_109        1
+demultiplex_11         1
+demultiplex_110        1
+demultiplex_111        1
+demultiplex_112        1
+demultiplex_113        1
+demultiplex_114        1
+demultiplex_115        1
+demultiplex_116        1
+demultiplex_117        1
+demultiplex_118        1
+demultiplex_119        1
+demultiplex_12         1
+demultiplex_120        1
+demultiplex_121        1
+demultiplex_122        1
+demultiplex_123        1
+demultiplex_124        1
+demultiplex_125        1
+demultiplex_126        1
+demultiplex_127        1
+demultiplex_128        1
+demultiplex_129        1
+demultiplex_13         1
+demultiplex_130        1
+demultiplex_131        1
+demultiplex_132        1
+demultiplex_133        1
+demultiplex_134        1
+demultiplex_135        1
+demultiplex_136        1
+demultiplex_137        1
+demultiplex_138        1
+demultiplex_139        1
+demultiplex_14         1
+demultiplex_140        1
+demultiplex_141        1
+demultiplex_142        1
+demultiplex_143        1
+demultiplex_144        1
+demultiplex_145        1
+demultiplex_146        1
+demultiplex_147        1
+demultiplex_148        1
+demultiplex_149        1
+demultiplex_15         1
+demultiplex_150        1
+demultiplex_151        1
+demultiplex_152        1
+demultiplex_153        1
+demultiplex_154        1
+demultiplex_155        1
+demultiplex_156        1
+demultiplex_157        1
+demultiplex_158        1
+demultiplex_159        1
+demultiplex_16         1
+demultiplex_160        1
+demultiplex_161        1
+demultiplex_162        1
+demultiplex_163        1
+demultiplex_164        1
+demultiplex_165        1
+demultiplex_166        1
+demultiplex_167        1
+demultiplex_168        1
+demultiplex_169        1
+demultiplex_17         1
+demultiplex_170        1
+demultiplex_171        1
+demultiplex_172        1
+demultiplex_173        1
+demultiplex_174        1
+demultiplex_175        1
+demultiplex_176        1
+demultiplex_177        1
+demultiplex_178        1
+demultiplex_179        1
+demultiplex_18         1
+demultiplex_180        1
+demultiplex_181        1
+demultiplex_182        1
+demultiplex_183        1
+demultiplex_184        1
+demultiplex_185        1
+demultiplex_186        1
+demultiplex_187        1
+demultiplex_188        1
+demultiplex_189        1
+demultiplex_19         1
+demultiplex_190        1
+demultiplex_191        1
+demultiplex_192        1
+demultiplex_193        1
+demultiplex_194        1
+demultiplex_195        1
+demultiplex_196        1
+demultiplex_197        1
+demultiplex_198        1
+demultiplex_199        1
+demultiplex_2          1
+demultiplex_20         1
+demultiplex_200        1
+demultiplex_201        1
+demultiplex_202        1
+demultiplex_203        1
+demultiplex_204        1
+demultiplex_205        1
+demultiplex_206        1
+demultiplex_207        1
+demultiplex_208        1
+demultiplex_209        1
+demultiplex_21         1
+demultiplex_210        1
+demultiplex_211        1
+demultiplex_212        1
+demultiplex_213        1
+demultiplex_214        1
+demultiplex_215        1
+demultiplex_216        1
+demultiplex_217        1
+demultiplex_218        1
+demultiplex_219        1
+demultiplex_22         1
+demultiplex_220        1
+demultiplex_221        1
+demultiplex_222        1
+demultiplex_223        1
+demultiplex_224        1
+demultiplex_225        1
+demultiplex_226        1
+demultiplex_227        1
+demultiplex_228        1
+demultiplex_229        1
+demultiplex_23         1
+demultiplex_230        1
+demultiplex_231        1
+demultiplex_232        1
+demultiplex_233        1
+demultiplex_234        1
+demultiplex_235        1
+demultiplex_236        1
+demultiplex_237        1
+demultiplex_238        1
+demultiplex_239        1
+demultiplex_24         1
+demultiplex_240        1
+demultiplex_241        1
+demultiplex_242        1
+demultiplex_243        1
+demultiplex_244        1
+demultiplex_245        1
+demultiplex_246        1
+demultiplex_247        1
+demultiplex_248        1
+demultiplex_249        1
+demultiplex_25         1
+demultiplex_250        1
+demultiplex_251        1
+demultiplex_252        1
+demultiplex_253        1
+demultiplex_254        1
+demultiplex_255        1
+demultiplex_256        1
+demultiplex_257        1
+demultiplex_258        1
+demultiplex_259        1
+demultiplex_26         1
+demultiplex_260        1
+demultiplex_261        1
+demultiplex_262        1
+demultiplex_263        1
+demultiplex_264        1
+demultiplex_265        1
+demultiplex_266        1
+demultiplex_267        1
+demultiplex_268        1
+demultiplex_269        1
+demultiplex_27         1
+demultiplex_270        1
+demultiplex_271        1
+demultiplex_272        1
+demultiplex_273        1
+demultiplex_274        1
+demultiplex_275        1
+demultiplex_276        1
+demultiplex_277        1
+demultiplex_278        1
+demultiplex_279        1
+demultiplex_28         1
+demultiplex_280        1
+demultiplex_281        1
+demultiplex_282        1
+demultiplex_283        1
+demultiplex_284        1
+demultiplex_285        1
+demultiplex_286        1
+demultiplex_287        1
+demultiplex_288        1
+demultiplex_289        1
+demultiplex_29         1
+demultiplex_290        1
+demultiplex_291        1
+demultiplex_292        1
+demultiplex_293        1
+demultiplex_294        1
+demultiplex_295        1
+demultiplex_296        1
+demultiplex_297        1
+demultiplex_298        1
+demultiplex_299        1
+demultiplex_3          1
+demultiplex_30         1
+demultiplex_300        1
+demultiplex_301        1
+demultiplex_302        1
+demultiplex_303        1
+demultiplex_304        1
+demultiplex_305        1
+demultiplex_306        1
+demultiplex_307        1
+demultiplex_308        1
+demultiplex_309        1
+demultiplex_31         1
+demultiplex_310        1
+demultiplex_311        1
+demultiplex_312        1
+demultiplex_313        1
+demultiplex_314        1
+demultiplex_315        1
+demultiplex_316        1
+demultiplex_317        1
+demultiplex_318        1
+demultiplex_319        1
+demultiplex_32         1
+demultiplex_320        1
+demultiplex_321        1
+demultiplex_322        1
+demultiplex_323        1
+demultiplex_324        1
+demultiplex_325        1
+demultiplex_326        1
+demultiplex_327        1
+demultiplex_328        1
+demultiplex_329        1
+demultiplex_33         1
+demultiplex_330        1
+demultiplex_331        1
+demultiplex_332        1
+demultiplex_333        1
+demultiplex_334        1
+demultiplex_335        1
+demultiplex_336        1
+demultiplex_337        1
+demultiplex_338        1
+demultiplex_339        1
+demultiplex_34         1
+demultiplex_340        1
+demultiplex_341        1
+demultiplex_342        1
+demultiplex_343        1
+demultiplex_344        1
+demultiplex_345        1
+demultiplex_346        1
+demultiplex_347        1
+demultiplex_348        1
+demultiplex_349        1
+demultiplex_35         1
+demultiplex_350        1
+demultiplex_351        1
+demultiplex_352        1
+demultiplex_353        1
+demultiplex_354        1
+demultiplex_355        1
+demultiplex_356        1
+demultiplex_357        1
+demultiplex_358        1
+demultiplex_359        1
+demultiplex_36         1
+demultiplex_360        1
+demultiplex_361        1
+demultiplex_362        1
+demultiplex_363        1
+demultiplex_364        1
+demultiplex_365        1
+demultiplex_366        1
+demultiplex_367        1
+demultiplex_368        1
+demultiplex_369        1
+demultiplex_37         1
+demultiplex_370        1
+demultiplex_371        1
+demultiplex_372        1
+demultiplex_373        1
+demultiplex_374        1
+demultiplex_375        1
+demultiplex_376        1
+demultiplex_377        1
+demultiplex_378        1
+demultiplex_379        1
+demultiplex_38         1
+demultiplex_380        1
+demultiplex_381        1
+demultiplex_382        1
+demultiplex_383        1
+demultiplex_39         1
+demultiplex_4          1
+demultiplex_40         1
+demultiplex_41         1
+demultiplex_42         1
+demultiplex_43         1
+demultiplex_44         1
+demultiplex_45         1
+demultiplex_46         1
+demultiplex_47         1
+demultiplex_48         1
+demultiplex_49         1
+demultiplex_5          1
+demultiplex_50         1
+demultiplex_51         1
+demultiplex_52         1
+demultiplex_53         1
+demultiplex_54         1
+demultiplex_55         1
+demultiplex_56         1
+demultiplex_57         1
+demultiplex_58         1
+demultiplex_59         1
+demultiplex_6          1
+demultiplex_60         1
+demultiplex_61         1
+demultiplex_62         1
+demultiplex_63         1
+demultiplex_64         1
+demultiplex_65         1
+demultiplex_66         1
+demultiplex_67         1
+demultiplex_68         1
+demultiplex_69         1
+demultiplex_7          1
+demultiplex_70         1
+demultiplex_71         1
+demultiplex_72         1
+demultiplex_73         1
+demultiplex_74         1
+demultiplex_75         1
+demultiplex_76         1
+demultiplex_77         1
+demultiplex_78         1
+demultiplex_79         1
+demultiplex_8          1
+demultiplex_80         1
+demultiplex_81         1
+demultiplex_82         1
+demultiplex_83         1
+demultiplex_84         1
+demultiplex_85         1
+demultiplex_86         1
+demultiplex_87         1
+demultiplex_88         1
+demultiplex_89         1
+demultiplex_9          1
+demultiplex_90         1
+demultiplex_91         1
+demultiplex_92         1
+demultiplex_93         1
+demultiplex_94         1
+demultiplex_95         1
+demultiplex_96         1
+demultiplex_97         1
+demultiplex_98         1
+demultiplex_99         1
+final                  1
+total                385
+
+Select jobs to execute...
+
+[Wed Mar 12 16:35:36 2025]
+rule demultiplex_258:
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K4/raw/S_5-1-K4+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K4/raw/S_5-1-K4+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K4/lanes/S_5-1-K4-L003.demultiplex.stats.txt
+    jobid: 259
+    reason: Missing output files: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K4/lanes/S_5-1-K4-L003.demultiplex.stats.txt
+    resources: tmpdir=/tmp
+
+
+[Wed Mar 12 16:35:36 2025]
+rule demultiplex_342:
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O15/raw/S_5-1-O15+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O15/raw/S_5-1-O15+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O15/lanes/S_5-1-O15-L003.demultiplex.stats.txt
+    jobid: 343
+    reason: Missing output files: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O15/lanes/S_5-1-O15-L003.demultiplex.stats.txt
+    resources: tmpdir=/tmp
+
+
+[Wed Mar 12 16:35:36 2025]
+rule demultiplex_371:
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-P2/raw/S_5-1-P2+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-P2/raw/S_5-1-P2+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-P2/lanes/S_5-1-P2-L003.demultiplex.stats.txt
+    jobid: 372
+    reason: Missing output files: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-P2/lanes/S_5-1-P2-L003.demultiplex.stats.txt
+    resources: tmpdir=/tmp
+
+
+[Wed Mar 12 16:35:36 2025]
+rule demultiplex_287:
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-L9/raw/S_5-1-L9+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-L9/raw/S_5-1-L9+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-L9/lanes/S_5-1-L9-L003.demultiplex.stats.txt
+    jobid: 288
+    reason: Missing output files: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-L9/lanes/S_5-1-L9-L003.demultiplex.stats.txt
+    resources: tmpdir=/tmp
+
+
+[Wed Mar 12 16:35:36 2025]
+rule demultiplex_35:
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B2/raw/S_5-1-B2+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B2/raw/S_5-1-B2+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B2/lanes/S_5-1-B2-L003.demultiplex.stats.txt
+    jobid: 36
+    reason: Missing output files: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B2/lanes/S_5-1-B2-L003.demultiplex.stats.txt
+    resources: tmpdir=/tmp
+
+
+[Wed Mar 12 16:35:36 2025]
+rule demultiplex_77:
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D14/raw/S_5-1-D14+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D14/raw/S_5-1-D14+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D14/lanes/S_5-1-D14-L003.demultiplex.stats.txt
+    jobid: 78
+    reason: Missing output files: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D14/lanes/S_5-1-D14-L003.demultiplex.stats.txt
+    resources: tmpdir=/tmp
+
+
+[Wed Mar 12 16:35:36 2025]
+rule demultiplex_217:
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J10/raw/S_5-1-J10+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J10/raw/S_5-1-J10+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J10/lanes/S_5-1-J10-L003.demultiplex.stats.txt
+    jobid: 218
+    reason: Missing output files: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J10/lanes/S_5-1-J10-L003.demultiplex.stats.txt
+    resources: tmpdir=/tmp
+
+
+[Wed Mar 12 16:35:36 2025]
+rule demultiplex_289:
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M10/raw/S_5-1-M10+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M10/raw/S_5-1-M10+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M10/lanes/S_5-1-M10-L003.demultiplex.stats.txt
+    jobid: 290
+    reason: Missing output files: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M10/lanes/S_5-1-M10-L003.demultiplex.stats.txt
+    resources: tmpdir=/tmp
+
+
+[Wed Mar 12 16:35:36 2025]
+rule demultiplex_257:
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K3/raw/S_5-1-K3+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K3/raw/S_5-1-K3+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K3/lanes/S_5-1-K3-L003.demultiplex.stats.txt
+    jobid: 258
+    reason: Missing output files: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K3/lanes/S_5-1-K3-L003.demultiplex.stats.txt
+    resources: tmpdir=/tmp
+
+
+[Wed Mar 12 16:35:36 2025]
+rule demultiplex_341:
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O14/raw/S_5-1-O14+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O14/raw/S_5-1-O14+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O14/lanes/S_5-1-O14-L003.demultiplex.stats.txt
+    jobid: 342
+    reason: Missing output files: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O14/lanes/S_5-1-O14-L003.demultiplex.stats.txt
+    resources: tmpdir=/tmp
+
+
+[Wed Mar 12 16:35:36 2025]
+rule demultiplex_256:
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K24/raw/S_5-1-K24+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K24/raw/S_5-1-K24+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K24/lanes/S_5-1-K24-L003.demultiplex.stats.txt
+    jobid: 257
+    reason: Missing output files: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K24/lanes/S_5-1-K24-L003.demultiplex.stats.txt
+    resources: tmpdir=/tmp
+
+
+[Wed Mar 12 16:35:36 2025]
+rule demultiplex_36:
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B20/raw/S_5-1-B20+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B20/raw/S_5-1-B20+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B20/lanes/S_5-1-B20-L003.demultiplex.stats.txt
+    jobid: 37
+    reason: Missing output files: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B20/lanes/S_5-1-B20-L003.demultiplex.stats.txt
+    resources: tmpdir=/tmp
+
+
+[Wed Mar 12 16:35:36 2025]
+rule demultiplex_78:
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D15/raw/S_5-1-D15+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D15/raw/S_5-1-D15+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D15/lanes/S_5-1-D15-L003.demultiplex.stats.txt
+    jobid: 79
+    reason: Missing output files: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D15/lanes/S_5-1-D15-L003.demultiplex.stats.txt
+    resources: tmpdir=/tmp
+
+
+[Wed Mar 12 16:35:36 2025]
+rule demultiplex_218:
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J11/raw/S_5-1-J11+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J11/raw/S_5-1-J11+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J11/lanes/S_5-1-J11-L003.demultiplex.stats.txt
+    jobid: 219
+    reason: Missing output files: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J11/lanes/S_5-1-J11-L003.demultiplex.stats.txt
+    resources: tmpdir=/tmp
+
+
+[Wed Mar 12 16:35:36 2025]
+rule demultiplex_288:
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M1/raw/S_5-1-M1+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M1/raw/S_5-1-M1+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M1/lanes/S_5-1-M1-L003.demultiplex.stats.txt
+    jobid: 289
+    reason: Missing output files: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M1/lanes/S_5-1-M1-L003.demultiplex.stats.txt
+    resources: tmpdir=/tmp
+
+
+[Wed Mar 12 16:35:36 2025]
+rule demultiplex_340:
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O13/raw/S_5-1-O13+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O13/raw/S_5-1-O13+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O13/lanes/S_5-1-O13-L003.demultiplex.stats.txt
+    jobid: 341
+    reason: Missing output files: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O13/lanes/S_5-1-O13-L003.demultiplex.stats.txt
+    resources: tmpdir=/tmp
+
+Not a gzipped file (b'@l')
+Not a gzipped file (b'@l')
+Not a gzipped file (b'@l')
+Not a gzipped file (b'@l')
+Not a gzipped file (b'@l')
+Not a gzipped file (b'@l')
+Not a gzipped file (b'@l')
+Not a gzipped file (b'@l')
+Not a gzipped file (b'@l')
+Not a gzipped file (b'@l')
+Not a gzipped file (b'@l')
+[Wed Mar 12 16:35:38 2025]
+[Wed Mar 12 16:35:38 2025]
+[Wed Mar 12 16:35:38 2025]
+[Wed Mar 12 16:35:38 2025]
+[Wed Mar 12 16:35:38 2025]
+[Wed Mar 12 16:35:38 2025]
+Error in rule demultiplex_340:
+    jobid: 341
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O13/raw/S_5-1-O13+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O13/raw/S_5-1-O13+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O13/lanes/S_5-1-O13-L003.demultiplex.stats.txt
+    shell:
+        cutadapt -Z -e 0.01 --no-indels -g file:/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/files/random_index_v2/random_index_v2.fa -o /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O13/lanes/S_5-1-O13-L003-{name}-R1.fq.gz -p /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O13/lanes/S_5-1-O13-L003-{name}-R2.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O13/raw/S_5-1-O13+L003+R1.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O13/raw/S_5-1-O13+L003+R2.fq.gz > /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O13/lanes/S_5-1-O13-L003.demultiplex.stats.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Error in rule demultiplex_289:
+    jobid: 290
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M10/raw/S_5-1-M10+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M10/raw/S_5-1-M10+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M10/lanes/S_5-1-M10-L003.demultiplex.stats.txt
+    shell:
+        cutadapt -Z -e 0.01 --no-indels -g file:/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/files/random_index_v2/random_index_v2.fa -o /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M10/lanes/S_5-1-M10-L003-{name}-R1.fq.gz -p /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M10/lanes/S_5-1-M10-L003-{name}-R2.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M10/raw/S_5-1-M10+L003+R1.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M10/raw/S_5-1-M10+L003+R2.fq.gz > /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M10/lanes/S_5-1-M10-L003.demultiplex.stats.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Wed Mar 12 16:35:38 2025]
+Error in rule demultiplex_342:
+    jobid: 343
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O15/raw/S_5-1-O15+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O15/raw/S_5-1-O15+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O15/lanes/S_5-1-O15-L003.demultiplex.stats.txt
+    shell:
+        cutadapt -Z -e 0.01 --no-indels -g file:/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/files/random_index_v2/random_index_v2.fa -o /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O15/lanes/S_5-1-O15-L003-{name}-R1.fq.gz -p /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O15/lanes/S_5-1-O15-L003-{name}-R2.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O15/raw/S_5-1-O15+L003+R1.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O15/raw/S_5-1-O15+L003+R2.fq.gz > /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O15/lanes/S_5-1-O15-L003.demultiplex.stats.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Wed Mar 12 16:35:38 2025]
+[Wed Mar 12 16:35:38 2025]
+[Wed Mar 12 16:35:38 2025]
+Error in rule demultiplex_288:
+    jobid: 289
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M1/raw/S_5-1-M1+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M1/raw/S_5-1-M1+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M1/lanes/S_5-1-M1-L003.demultiplex.stats.txt
+    shell:
+        cutadapt -Z -e 0.01 --no-indels -g file:/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/files/random_index_v2/random_index_v2.fa -o /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M1/lanes/S_5-1-M1-L003-{name}-R1.fq.gz -p /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M1/lanes/S_5-1-M1-L003-{name}-R2.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M1/raw/S_5-1-M1+L003+R1.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M1/raw/S_5-1-M1+L003+R2.fq.gz > /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M1/lanes/S_5-1-M1-L003.demultiplex.stats.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Error in rule demultiplex_287:
+    jobid: 288
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-L9/raw/S_5-1-L9+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-L9/raw/S_5-1-L9+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-L9/lanes/S_5-1-L9-L003.demultiplex.stats.txt
+    shell:
+        cutadapt -Z -e 0.01 --no-indels -g file:/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/files/random_index_v2/random_index_v2.fa -o /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-L9/lanes/S_5-1-L9-L003-{name}-R1.fq.gz -p /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-L9/lanes/S_5-1-L9-L003-{name}-R2.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-L9/raw/S_5-1-L9+L003+R1.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-L9/raw/S_5-1-L9+L003+R2.fq.gz > /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-L9/lanes/S_5-1-L9-L003.demultiplex.stats.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Error in rule demultiplex_36:
+    jobid: 37
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B20/raw/S_5-1-B20+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B20/raw/S_5-1-B20+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B20/lanes/S_5-1-B20-L003.demultiplex.stats.txt
+    shell:
+        cutadapt -Z -e 0.01 --no-indels -g file:/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/files/random_index_v2/random_index_v2.fa -o /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B20/lanes/S_5-1-B20-L003-{name}-R1.fq.gz -p /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B20/lanes/S_5-1-B20-L003-{name}-R2.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B20/raw/S_5-1-B20+L003+R1.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B20/raw/S_5-1-B20+L003+R2.fq.gz > /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B20/lanes/S_5-1-B20-L003.demultiplex.stats.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job demultiplex_340 since they might be corrupted:
+/gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O13/lanes/S_5-1-O13-L003.demultiplex.stats.txt
+Error in rule demultiplex_218:
+    jobid: 219
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J11/raw/S_5-1-J11+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J11/raw/S_5-1-J11+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J11/lanes/S_5-1-J11-L003.demultiplex.stats.txt
+    shell:
+        cutadapt -Z -e 0.01 --no-indels -g file:/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/files/random_index_v2/random_index_v2.fa -o /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J11/lanes/S_5-1-J11-L003-{name}-R1.fq.gz -p /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J11/lanes/S_5-1-J11-L003-{name}-R2.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J11/raw/S_5-1-J11+L003+R1.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J11/raw/S_5-1-J11+L003+R2.fq.gz > /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J11/lanes/S_5-1-J11-L003.demultiplex.stats.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Error in rule demultiplex_258:
+    jobid: 259
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K4/raw/S_5-1-K4+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K4/raw/S_5-1-K4+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K4/lanes/S_5-1-K4-L003.demultiplex.stats.txt
+    shell:
+        cutadapt -Z -e 0.01 --no-indels -g file:/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/files/random_index_v2/random_index_v2.fa -o /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K4/lanes/S_5-1-K4-L003-{name}-R1.fq.gz -p /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K4/lanes/S_5-1-K4-L003-{name}-R2.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K4/raw/S_5-1-K4+L003+R1.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K4/raw/S_5-1-K4+L003+R2.fq.gz > /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K4/lanes/S_5-1-K4-L003.demultiplex.stats.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Error in rule demultiplex_35:
+    jobid: 36
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B2/raw/S_5-1-B2+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B2/raw/S_5-1-B2+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B2/lanes/S_5-1-B2-L003.demultiplex.stats.txt
+    shell:
+        cutadapt -Z -e 0.01 --no-indels -g file:/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/files/random_index_v2/random_index_v2.fa -o /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B2/lanes/S_5-1-B2-L003-{name}-R1.fq.gz -p /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B2/lanes/S_5-1-B2-L003-{name}-R2.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B2/raw/S_5-1-B2+L003+R1.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B2/raw/S_5-1-B2+L003+R2.fq.gz > /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B2/lanes/S_5-1-B2-L003.demultiplex.stats.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Wed Mar 12 16:35:38 2025]
+Error in rule demultiplex_217:
+    jobid: 218
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J10/raw/S_5-1-J10+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J10/raw/S_5-1-J10+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J10/lanes/S_5-1-J10-L003.demultiplex.stats.txt
+    shell:
+        cutadapt -Z -e 0.01 --no-indels -g file:/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/files/random_index_v2/random_index_v2.fa -o /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J10/lanes/S_5-1-J10-L003-{name}-R1.fq.gz -p /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J10/lanes/S_5-1-J10-L003-{name}-R2.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J10/raw/S_5-1-J10+L003+R1.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J10/raw/S_5-1-J10+L003+R2.fq.gz > /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J10/lanes/S_5-1-J10-L003.demultiplex.stats.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Error in rule demultiplex_371:
+    jobid: 372
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-P2/raw/S_5-1-P2+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-P2/raw/S_5-1-P2+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-P2/lanes/S_5-1-P2-L003.demultiplex.stats.txt
+    shell:
+        cutadapt -Z -e 0.01 --no-indels -g file:/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/files/random_index_v2/random_index_v2.fa -o /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-P2/lanes/S_5-1-P2-L003-{name}-R1.fq.gz -p /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-P2/lanes/S_5-1-P2-L003-{name}-R2.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-P2/raw/S_5-1-P2+L003+R1.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-P2/raw/S_5-1-P2+L003+R2.fq.gz > /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-P2/lanes/S_5-1-P2-L003.demultiplex.stats.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job demultiplex_289 since they might be corrupted:
+/gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M10/lanes/S_5-1-M10-L003.demultiplex.stats.txt
+Removing output files of failed job demultiplex_342 since they might be corrupted:
+/gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O15/lanes/S_5-1-O15-L003.demultiplex.stats.txt
+Removing output files of failed job demultiplex_288 since they might be corrupted:
+/gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-M1/lanes/S_5-1-M1-L003.demultiplex.stats.txt
+Removing output files of failed job demultiplex_287 since they might be corrupted:
+/gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-L9/lanes/S_5-1-L9-L003.demultiplex.stats.txt
+Removing output files of failed job demultiplex_36 since they might be corrupted:
+/gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B20/lanes/S_5-1-B20-L003.demultiplex.stats.txt
+Removing output files of failed job demultiplex_218 since they might be corrupted:
+/gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J11/lanes/S_5-1-J11-L003.demultiplex.stats.txt
+Removing output files of failed job demultiplex_258 since they might be corrupted:
+/gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K4/lanes/S_5-1-K4-L003.demultiplex.stats.txt
+Removing output files of failed job demultiplex_35 since they might be corrupted:
+/gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-B2/lanes/S_5-1-B2-L003.demultiplex.stats.txt
+Removing output files of failed job demultiplex_217 since they might be corrupted:
+/gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-J10/lanes/S_5-1-J10-L003.demultiplex.stats.txt
+Removing output files of failed job demultiplex_371 since they might be corrupted:
+/gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-P2/lanes/S_5-1-P2-L003.demultiplex.stats.txt
+Not a gzipped file (b'@l')
+[Wed Mar 12 16:35:38 2025]
+Error in rule demultiplex_77:
+    jobid: 78
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D14/raw/S_5-1-D14+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D14/raw/S_5-1-D14+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D14/lanes/S_5-1-D14-L003.demultiplex.stats.txt
+    shell:
+        cutadapt -Z -e 0.01 --no-indels -g file:/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/files/random_index_v2/random_index_v2.fa -o /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D14/lanes/S_5-1-D14-L003-{name}-R1.fq.gz -p /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D14/lanes/S_5-1-D14-L003-{name}-R2.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D14/raw/S_5-1-D14+L003+R1.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D14/raw/S_5-1-D14+L003+R2.fq.gz > /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D14/lanes/S_5-1-D14-L003.demultiplex.stats.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job demultiplex_77 since they might be corrupted:
+/gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D14/lanes/S_5-1-D14-L003.demultiplex.stats.txt
+Not a gzipped file (b'@l')
+[Wed Mar 12 16:35:38 2025]
+Error in rule demultiplex_256:
+    jobid: 257
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K24/raw/S_5-1-K24+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K24/raw/S_5-1-K24+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K24/lanes/S_5-1-K24-L003.demultiplex.stats.txt
+    shell:
+        cutadapt -Z -e 0.01 --no-indels -g file:/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/files/random_index_v2/random_index_v2.fa -o /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K24/lanes/S_5-1-K24-L003-{name}-R1.fq.gz -p /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K24/lanes/S_5-1-K24-L003-{name}-R2.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K24/raw/S_5-1-K24+L003+R1.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K24/raw/S_5-1-K24+L003+R2.fq.gz > /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K24/lanes/S_5-1-K24-L003.demultiplex.stats.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job demultiplex_256 since they might be corrupted:
+/gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K24/lanes/S_5-1-K24-L003.demultiplex.stats.txt
+Not a gzipped file (b'@l')
+[Wed Mar 12 16:35:38 2025]
+Error in rule demultiplex_341:
+    jobid: 342
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O14/raw/S_5-1-O14+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O14/raw/S_5-1-O14+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O14/lanes/S_5-1-O14-L003.demultiplex.stats.txt
+    shell:
+        cutadapt -Z -e 0.01 --no-indels -g file:/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/files/random_index_v2/random_index_v2.fa -o /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O14/lanes/S_5-1-O14-L003-{name}-R1.fq.gz -p /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O14/lanes/S_5-1-O14-L003-{name}-R2.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O14/raw/S_5-1-O14+L003+R1.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O14/raw/S_5-1-O14+L003+R2.fq.gz > /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O14/lanes/S_5-1-O14-L003.demultiplex.stats.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job demultiplex_341 since they might be corrupted:
+/gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-O14/lanes/S_5-1-O14-L003.demultiplex.stats.txt
+Not a gzipped file (b'@l')
+Not a gzipped file (b'@l')
+[Wed Mar 12 16:35:38 2025]
+Error in rule demultiplex_78:
+    jobid: 79
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D15/raw/S_5-1-D15+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D15/raw/S_5-1-D15+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D15/lanes/S_5-1-D15-L003.demultiplex.stats.txt
+    shell:
+        cutadapt -Z -e 0.01 --no-indels -g file:/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/files/random_index_v2/random_index_v2.fa -o /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D15/lanes/S_5-1-D15-L003-{name}-R1.fq.gz -p /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D15/lanes/S_5-1-D15-L003-{name}-R2.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D15/raw/S_5-1-D15+L003+R1.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D15/raw/S_5-1-D15+L003+R2.fq.gz > /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D15/lanes/S_5-1-D15-L003.demultiplex.stats.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job demultiplex_78 since they might be corrupted:
+/gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-D15/lanes/S_5-1-D15-L003.demultiplex.stats.txt
+[Wed Mar 12 16:35:38 2025]
+Error in rule demultiplex_257:
+    jobid: 258
+    input: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K3/raw/S_5-1-K3+L003+R1.fq.gz, /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K3/raw/S_5-1-K3+L003+R2.fq.gz
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K3/lanes/S_5-1-K3-L003.demultiplex.stats.txt
+    shell:
+        cutadapt -Z -e 0.01 --no-indels -g file:/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/files/random_index_v2/random_index_v2.fa -o /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K3/lanes/S_5-1-K3-L003-{name}-R1.fq.gz -p /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K3/lanes/S_5-1-K3-L003-{name}-R2.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K3/raw/S_5-1-K3+L003+R1.fq.gz /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K3/raw/S_5-1-K3+L003+R2.fq.gz > /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K3/lanes/S_5-1-K3-L003.demultiplex.stats.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job demultiplex_257 since they might be corrupted:
+/gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-K3/lanes/S_5-1-K3-L003.demultiplex.stats.txt
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-03-12T163524.649384.snakemake.log
+Detect only single multiplex group in each plate, will use V2-single mode.
+Demultiplexing raw FASTQ
+
+None
+Traceback (most recent call last):
+  File "/gpfs/home/asun/miniforge3/envs/yap/bin/yap", line 8, in <module>
+    sys.exit(main())
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/__main__.py", line 864, in main
+    func(**args_vars)
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/demultiplex/demultiplex.py", line 454, in demultiplex_pipeline
+    demultiplex_version = _demultiplex(fastq_pattern=fastq_pattern,
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/demultiplex/demultiplex.py", line 146, in _demultiplex
+    snakemake(workdir=output_dir, snakefile=final_snake_path, cores=cpu)
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/utilities.py", line 144, in snakemake
+    raise e
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/utilities.py", line 132, in snakemake
+    subprocess.run([
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['snakemake', '-d', '/gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex', '--snakefile', '/gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/Snakefile_demultiplex', '--cores', '16']' returned non-zero exit status 1.
