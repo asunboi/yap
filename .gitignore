@@ -17,6 +17,8 @@ __pycache__/
 *.tsv
 *.gz
 *.csv
+*.h5
+*.stats.*
 
 # Bioinfo datafiles
 *.sam
@@ -25,12 +27,13 @@ __pycache__/
 *.out*
 *.fq*
 *.gtf
-*.bam
+*.bam*
+
 *.bed
 
 # Bioinfo reference databases
 **/star/
 
-# Datafiles in general
-
+# Specific to YAP
+**/yap_demultiplex
 
