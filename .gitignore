@@ -1,0 +1,36 @@
+# Jupyter Notebook
+**/.ipynb_checkpoints/
+
+# Data repositories
+**/output/
+**/raw_data/
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Datafiles
+*.csv
+*.Robj
+*.tsv
+*.gz
+*.csv
+
+# Bioinfo datafiles
+*.sam
+*.fa
+*.bt2
+*.out*
+*.fq*
+*.gtf
+*.bam
+*.bed
+
+# Bioinfo reference databases
+**/star/
+
+# Datafiles in general
+
+

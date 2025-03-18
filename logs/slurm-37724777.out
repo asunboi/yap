@@ -1,0 +1,65 @@
+Mapping config file looks good. Here is what will be used in generating Snakefile:
+overlap = 6
+r1_left_cut = 10
+r1_right_cut = 10
+r2_left_cut = 10
+r2_right_cut = 10
+quality_threshold = 20
+length_threshold = 30
+total_read_pairs_min = 1
+total_read_pairs_max = 6000000
+mapq_threshold = 10
+num_upstr_bases = 0
+num_downstr_bases = 2
+compress_level = 5
+dna_cov_min_threshold = 3
+rna_cov_min_threshold = 3
+mc_rate_max_threshold = 0.5
+mc_rate_min_threshold = 0.9
+unmapped_fastq = False
+unmapped_param_str = ''
+mode = 'mct'
+barcode_version = 'V2'
+r1_adapter = 'AGATCGGAAGAGCACACGTCTGAAC'
+r2_adapter = 'AGATCGGAAGAGCGTCGTGTAGGGA'
+bismark_reference = '~/jin_lab/yap/raw_data/references'
+reference_fasta = '~/jin_lab/yap/raw_data/references/mm10_no_alt_analysis_ENCODE_with_chrL.fa'
+star_reference = '~/jin_lab/yap/raw_data/references/star'
+chrom_size_path = '~/jin_lab/yap/raw_data/references/mm10_no_alt_analysis_ENCODE_with_chrL.sizes'
+gtf_path = '~/jin_lab/yap/raw_data/references/ENCFF871VGR.gtf'
+feature_type = 'gene'
+id_type = 'gene_id'
+nome_flag_str = ''
+mc_stat_feature = 'CHN CGN CCC'
+mc_stat_alias = 'mCH mCG mCCC'
+annotation_path = 'None'
+
+770 FASTQ file paths in input
+Traceback (most recent call last):
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/demultiplex/fastq_dataframe.py", line 57, in _parse_v2_fastq_path
+    assert primer_name[0] in 'ABCDEFGHIJKLMNOP'
+AssertionError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/demultiplex/fastq_dataframe.py", line 63, in _parse_v2_fastq_path
+    raise ValueError
+ValueError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/gpfs/home/asun/miniforge3/envs/yap/bin/yap", line 8, in <module>
+    sys.exit(main())
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/__main__.py", line 864, in main
+    func(**args_vars)
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/demultiplex/demultiplex.py", line 454, in demultiplex_pipeline
+    demultiplex_version = _demultiplex(fastq_pattern=fastq_pattern,
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/demultiplex/demultiplex.py", line 45, in _demultiplex
+    fastq_df = make_fastq_dataframe(fastq_pattern,
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/demultiplex/fastq_dataframe.py", line 112, in make_fastq_dataframe
+    name_series = parser(path)
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/demultiplex/fastq_dataframe.py", line 65, in _parse_v2_fastq_path
+    raise ValueError(f'Found unknown name pattern in path {path}')
+ValueError: Found unknown name pattern in path /gpfs/home/asun/jin_lab/yap/raw_data/demultiplex/TEST-S_5-1-unknown_ii1_L003_2_ii2.fq

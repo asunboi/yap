@@ -1,0 +1,65 @@
+Mapping config file looks good. Here is what will be used in generating Snakefile:
+overlap = 6
+r1_left_cut = 10
+r1_right_cut = 10
+r2_left_cut = 10
+r2_right_cut = 10
+quality_threshold = 20
+length_threshold = 30
+total_read_pairs_min = 1
+total_read_pairs_max = 6000000
+mapq_threshold = 10
+num_upstr_bases = 0
+num_downstr_bases = 2
+compress_level = 5
+dna_cov_min_threshold = 3
+rna_cov_min_threshold = 3
+mc_rate_max_threshold = 0.5
+mc_rate_min_threshold = 0.9
+unmapped_fastq = False
+unmapped_param_str = ''
+mode = 'mct'
+barcode_version = 'V2'
+r1_adapter = 'AGATCGGAAGAGCACACGTCTGAAC'
+r2_adapter = 'AGATCGGAAGAGCGTCGTGTAGGGA'
+bismark_reference = '~/jin_lab/yap/raw_data/references'
+reference_fasta = '~/jin_lab/yap/raw_data/references/mm10_no_alt_analysis_ENCODE_with_chrL.fa'
+star_reference = '~/jin_lab/yap/raw_data/references/star'
+chrom_size_path = '~/jin_lab/yap/raw_data/references/mm10_no_alt_analysis_ENCODE_with_chrL.sizes'
+gtf_path = '~/jin_lab/yap/raw_data/references/ENCFF871VGR.gtf'
+feature_type = 'gene'
+id_type = 'gene_id'
+nome_flag_str = ''
+mc_stat_feature = 'CHN CGN CCC'
+mc_stat_alias = 'mCH mCG mCCC'
+annotation_path = 'None'
+
+768 FASTQ file paths in input
+768 valid fastq names.
+Building DAG of jobs...
+MissingInputException in rule demultiplex_0 in file /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-A1/lanes/Snakefile, line 2:
+Missing input files for rule demultiplex_0:
+    output: /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-A1/lanes/S_5-1-A1-L003.demultiplex.stats.txt
+    affected files:
+        /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-A1/raw/S_5-1-A1+L003+R1.fq.gz
+        /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/S_5-1-A1/raw/S_5-1-A1+L003+R2.fq.gz
+Detect only single multiplex group in each plate, will use V2-single mode.
+Demultiplexing raw FASTQ
+
+None
+Traceback (most recent call last):
+  File "/gpfs/home/asun/miniforge3/envs/yap/bin/yap", line 8, in <module>
+    sys.exit(main())
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/__main__.py", line 864, in main
+    func(**args_vars)
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/demultiplex/demultiplex.py", line 454, in demultiplex_pipeline
+    demultiplex_version = _demultiplex(fastq_pattern=fastq_pattern,
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/demultiplex/demultiplex.py", line 146, in _demultiplex
+    snakemake(workdir=output_dir, snakefile=final_snake_path, cores=cpu)
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/utilities.py", line 144, in snakemake
+    raise e
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/utilities.py", line 132, in snakemake
+    subprocess.run([
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['snakemake', '-d', '/gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex', '--snakefile', '/gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/Snakefile_demultiplex', '--cores', '16']' returned non-zero exit status 1.

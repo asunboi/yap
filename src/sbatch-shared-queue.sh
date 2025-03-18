@@ -1,0 +1,1 @@
+yap sbatch --project_name yap_demultiplex --command_file_path /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/snakemake/sbatch/snakemake_shared_cmd.txt --working_dir /gpfs/home/asun/jin_lab/yap/pipeline2_yap/yap_demultiplex/snakemake/sbatch --time_str 48:00:00 --queue shared

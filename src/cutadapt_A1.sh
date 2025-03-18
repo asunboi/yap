@@ -1,0 +1,3 @@
+#!/bin/sh
+
+cutadapt -j 16 -Z -e 0.01 --no-indels -g ACGATCAG --discard-untrimmed -o /gpfs/home/asun/jin_lab/yap/pipeline0_troubleshoot/S_5_{name}-R1.fq.gz -p /gpfs/home/asun/jin_lab/yap/pipeline0_troubleshoot/S_5_{name}-R2.fq.gz /gpfs/home/asun/jin_lab/yap/raw_data/novogene/S_5/S_5_CKDL250004755-1A_22MKYCLT4_L3_1.fq.gz /gpfs/home/asun/jin_lab/yap/raw_data/novogene/S_5/S_5_CKDL250004755-1A_22MKYCLT4_L3_2.fq.gz > /gpfs/home/asun/jin_lab/yap/pipeline0_troubleshoot/S_5.demultiplex.stats.txt

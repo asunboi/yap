@@ -1,0 +1,93 @@
+cutadapt -j 16 -g Foxg1g1=AGCGCGTTGTAGCTGAACGG -g Foxg1g2=GAGTTACAACGGGACCACGT -g Dnmt3ag1=GGTAGAACTCAAAGAAGAGG -g Dnmt3ag2=GCGGAGTGAACCCCAACCTG -g Stg1=GCTAGAAACCTAAAAATCTA -g Stg2=GGGCGATTGGAAAACACACA -O 10 --action=lowercase --discard-untrimmed -o S_5_A23-{name}-R1.fq.gz S_5_A23-R1.minimal.fq.gz
+This is cutadapt 4.9 with Python 3.8.19
+Command line parameters: -j 16 -g Foxg1g1=AGCGCGTTGTAGCTGAACGG -g Foxg1g2=GAGTTACAACGGGACCACGT -g Dnmt3ag1=GGTAGAACTCAAAGAAGAGG -g Dnmt3ag2=GCGGAGTGAACCCCAACCTG -g Stg1=GCTAGAAACCTAAAAATCTA -g Stg2=GGGCGATTGGAAAACACACA -O 10 --action=lowercase --discard-untrimmed -o S_5_A23-{name}-R1.fq.gz S_5_A23-R1.minimal.fq.gz
+Processing single-end reads on 16 cores ...
+Done           00:00:06     4,821,449 reads @   1.3 µs/read;  45.80 M reads/minute
+Finished in 6.629 s (1.375 µs/read; 43.64 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:               4,821,449
+Reads with adapters:                       866 (0.0%)
+
+== Read fate breakdown ==
+Reads discarded as untrimmed:        4,820,583 (100.0%)
+Reads written (passing filters):           866 (0.0%)
+
+Total basepairs processed:   702,506,552 bp
+Total written (filtered):        121,666 bp (0.0%)
+
+=== Adapter Foxg1g1 ===
+
+Sequence: AGCGCGTTGTAGCTGAACGG; Type: regular 5'; Length: 20; Trimmed: 0 times
+
+=== Adapter Foxg1g2 ===
+
+Sequence: GAGTTACAACGGGACCACGT; Type: regular 5'; Length: 20; Trimmed: 0 times
+
+=== Adapter Dnmt3ag1 ===
+
+Sequence: GGTAGAACTCAAAGAAGAGG; Type: regular 5'; Length: 20; Trimmed: 1 times
+
+Minimum overlap: 10
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+145	1	0.0	2	0 0 1
+
+
+=== Adapter Dnmt3ag2 ===
+
+Sequence: GCGGAGTGAACCCCAACCTG; Type: regular 5'; Length: 20; Trimmed: 401 times
+
+Minimum overlap: 10
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+10	142	4.6	1	4 138
+11	187	1.1	1	3 184
+12	69	0.3	1	0 69
+13	2	0.1	1	0 2
+131	1	0.0	2	0 0 1
+
+
+=== Adapter Stg1 ===
+
+Sequence: GCTAGAAACCTAAAAATCTA; Type: regular 5'; Length: 20; Trimmed: 117 times
+
+Minimum overlap: 10
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+9	14	18.4	0	0 14
+10	47	4.6	1	0 47
+11	12	1.1	1	0 12
+12	24	0.3	1	0 24
+13	11	0.1	1	0 11
+14	8	0.0	1	0 8
+64	1	0.0	2	0 0 1
+
+
+=== Adapter Stg2 ===
+
+Sequence: GGGCGATTGGAAAACACACA; Type: regular 5'; Length: 20; Trimmed: 347 times
+
+Minimum overlap: 10
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+9	30	18.4	0	0 30
+10	222	4.6	1	5 217
+11	87	1.1	1	0 87
+14	5	0.0	1	0 5
+86	1	0.0	2	0 0 1
+91	1	0.0	2	0 0 1
+94	1	0.0	2	0 0 1
