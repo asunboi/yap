@@ -3,6 +3,24 @@
 [https://lh3.github.io/2017/11/13/which-human-reference-genome-to-use]  
 [https://www.encodeproject.org/data-standards/reference-sequences/]  
 
+# 03/18/25
+Tried converting GTF files to BED files and then using intersect to see if we have any overlap over gene regions. 
+
+module load bedops
+gtf2bed < chrG.gtf > chrG.bed
+bedtools intersect -a EckerRelaxedAligned.out.bam -b ../chrG.bed > intersect.bam
+samtools view intersect.bam | grep Foxg1 | less
+samtools view intersect.bam | grep Dnmt3a | less
+
+gtf2bed < mm10_no_alt_ENCODE_chrL_chrG.gtf > mm10_no_alt_ENCODE_chrL_chrG.bed
+mv mm10_no_alt_ENCODE_chrL_chrG.bed ~/jin_lab/yap/pipeline0_troubleshoot/
+bedtools intersect -a EckerRelaxedAligned.out.bam -b ../mm10_no_alt_ENCODE_chrL_
+samtools view full_intersect.bam | grep Foxg1 | less
+
+zcat S_5_A24-Dnmt3ag2-R1.fq.gz | less
+samtools view EckerRelaxedAligned.out.bam | grep lh00134:653:22MKYCLT4:3:1141:9664:4685 | less
+
+
 # 03/17/25
 @lh00134:653:22MKYCLT4:3:1226:40536:24919 1:N:0:GCAGATAATC+CGCTGTAGGA
 TCACACATCAACTCAGAGTACCAAGTTGATAACGGACTAGCCTTATTTTAACTTGCTATTTCTAGCTCTAAAACTCACGCTCAGTCTGGGCCCCCACCAGATCGGAAGAGCACACGTCTGAACTCCAGTCACGCAGATAATCATCTG
