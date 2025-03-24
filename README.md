@@ -7,6 +7,21 @@
 The bedtools intersect is still not giving alignments to gene regions, just the reads that I can already intersect with (chrG). 
 I need a tool that will drag out gene specific alignments.
 Looking towards setting up github issues / Agile today. Issues + commit messages for issues, etc.
+gtf2bed requires an extra newline at the end of the GTF file to properly convert all regions to bed.
+
+Trying to figure out how to remove the reads that only align to the back of the scaffold.
+Doesn't seem like there is an easy way to adjust for this in terms of the spacer; not sure if STAR reads U (uracil) as T? No good base / letter for declaring a sequence that shouldn't match?
+Should I do independent scaffolds for the different gRNA instead of one complete artificial chromosome?
+
+Filtering instead by the first few base pairs of the scaffold, since they are distinct sequences. 
+
+wc -l TotalAlignedChrG.rna_reads.sam 
+638 TotalAlignedChrG.rna_reads.sam
+grep GTTTTA TotalAlignedChrG.rna_reads.sam | wc -l
+37
+grep GTTTAAG TotalAlignedChrG.rna_reads.sam | wc -l
+2
+
 
 
 # 03/18/25
