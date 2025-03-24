@@ -3,6 +3,12 @@
 [https://lh3.github.io/2017/11/13/which-human-reference-genome-to-use]  
 [https://www.encodeproject.org/data-standards/reference-sequences/]  
 
+# 03/24/25
+The bedtools intersect is still not giving alignments to gene regions, just the reads that I can already intersect with (chrG). 
+I need a tool that will drag out gene specific alignments.
+Looking towards setting up github issues / Agile today. Issues + commit messages for issues, etc.
+
+
 # 03/18/25
 Tried converting GTF files to BED files and then using intersect to see if we have any overlap over gene regions. 
 
