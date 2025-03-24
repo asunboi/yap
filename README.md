@@ -20,6 +20,7 @@ samtools view full_intersect.bam | grep Foxg1 | less
 zcat S_5_A24-Dnmt3ag2-R1.fq.gz | less
 samtools view EckerRelaxedAligned.out.bam | grep lh00134:653:22MKYCLT4:3:1141:9664:4685 | less
 
+TODO cassie wants code that finds a sequence, extracts the upstream and aligns it to another reference.
 
 # 03/17/25
 @lh00134:653:22MKYCLT4:3:1226:40536:24919 1:N:0:GCAGATAATC+CGCTGTAGGA
