@@ -4,25 +4,33 @@
 [https://www.encodeproject.org/data-standards/reference-sequences/]  
 
 # 03/24/25
-The bedtools intersect is still not giving alignments to gene regions, just the reads that I can already intersect with (chrG). 
-I need a tool that will drag out gene specific alignments.
-Looking towards setting up github issues / Agile today. Issues + commit messages for issues, etc.
-gtf2bed requires an extra newline at the end of the GTF file to properly convert all regions to bed.
+The bedtools intersect is still not giving alignments to gene regions, just the reads that I can already intersect with (chrG).  
+I need a tool that will drag out gene specific alignments.  
+Looking towards setting up github issues / Agile today. Issues + commit messages for issues, etc.  
+gtf2bed requires an extra newline at the end of the GTF file to properly convert all regions to bed.  
 
-Trying to figure out how to remove the reads that only align to the back of the scaffold.
-Doesn't seem like there is an easy way to adjust for this in terms of the spacer; not sure if STAR reads U (uracil) as T? No good base / letter for declaring a sequence that shouldn't match?
-Should I do independent scaffolds for the different gRNA instead of one complete artificial chromosome?
+Trying to figure out how to remove the reads that only align to the back of the scaffold.  
+Doesn't seem like there is an easy way to adjust for this in terms of the spacer; not sure if STAR reads U (uracil) as T? No good base / letter for declaring a sequence that shouldn't match?  
+Should I do independent scaffolds for the different gRNA instead of one complete artificial chromosome?  
 
 Filtering instead by the first few base pairs of the scaffold, since they are distinct sequences. 
 
-wc -l TotalAlignedChrG.rna_reads.sam 
-638 TotalAlignedChrG.rna_reads.sam
-grep GTTTTA TotalAlignedChrG.rna_reads.sam | wc -l
-37
-grep GTTTAAG TotalAlignedChrG.rna_reads.sam | wc -l
-2
+wc -l TotalAlignedChrG.rna_reads.sam  
+638 TotalAlignedChrG.rna_reads.sam  
+grep GTTTTA TotalAlignedChrG.rna_reads.sam | wc -l  
+37  
+grep GTTTAAG TotalAlignedChrG.rna_reads.sam | wc -l  
+2  
 
-
+```bash
+grep GTTTTA TotalAlignedChrG.rna_reads.sam | cut -f1 >> grna_readnames.txt
+grep GTTTAAG TotalAlignedChrG.rna_reads.sam | cut -f1 >> grna_readnames.txt
+zcat ~/jin_lab/yap/raw_data/S_10/S_10_CKDL250004755-1A_22MKYCLT4_L3_1.fq.gz | grep -A 3 -F -f grna_readnames.txt > grna_reads.fq
+sed -i '/^--$/d' grna_reads.fq
+awk 'NR % 4 == 1 {header = $0} NR % 4 == 2 {seq = substr($0, 1, 8); print ">" substr(header, 2) "\n" seq}' grna_reads.fq > grna_reads.fa
+awk 'NR % 2 == 0' grna_reads.fa | sort -u > grna_primers.txt
+rep -F -B 1 -f grna_primers.txt /gpfs/home/asun/jin_lab/yap/raw_data/384RPIndexes.fasta
+```
 
 # 03/18/25
 Tried converting GTF files to BED files and then using intersect to see if we have any overlap over gene regions. 
