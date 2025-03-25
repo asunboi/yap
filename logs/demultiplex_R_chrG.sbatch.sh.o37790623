@@ -1,0 +1,77 @@
+Mapping config file looks good. Here is what will be used in generating Snakefile:
+overlap = 6
+r1_left_cut = 10
+r1_right_cut = 10
+r2_left_cut = 10
+r2_right_cut = 10
+quality_threshold = 20
+length_threshold = 30
+total_read_pairs_min = 1
+total_read_pairs_max = 6000000
+mapq_threshold = 10
+num_upstr_bases = 0
+num_downstr_bases = 2
+compress_level = 5
+dna_cov_min_threshold = 3
+rna_cov_min_threshold = 3
+mc_rate_max_threshold = 0.5
+mc_rate_min_threshold = 0.9
+unmapped_fastq = False
+unmapped_param_str = ''
+mode = 'mct'
+barcode_version = 'V2'
+r1_adapter = 'AGATCGGAAGAGCACACGTCTGAAC'
+r2_adapter = 'AGATCGGAAGAGCGTCGTGTAGGGA'
+bismark_reference = '~/jin_lab/yap/raw_data/ref_w_chrG'
+reference_fasta = '~/jin_lab/yap/raw_data/ref_w_chrG/mm10_no_alt_ENCODE_chrL_chrG.fa'
+star_reference = '~/jin_lab/yap/raw_data/ref_w_chrG/star'
+chrom_size_path = '~/jin_lab/yap/raw_data/ref_w_chrG/mm10_no_alt_ENCODE_chrL_chrG.sizes'
+gtf_path = '~/jin_lab/yap/raw_data/ref_w_chrG/mm10_no_alt_ENCODE_chrL_chrG.gtf'
+feature_type = 'gene'
+id_type = 'gene_id'
+nome_flag_str = ''
+mc_stat_feature = 'CHN CGN CCC'
+mc_stat_alias = 'mCH mCG mCCC'
+annotation_path = 'None'
+
+2 FASTQ file paths in input
+2 valid fastq names.
+Detect only single multiplex group in each plate, will use V2-single mode.
+Demultiplexing raw FASTQ
+Merging lanes to get cell FASTQ
+Reformat directories to separate multiplex groups
+Skip 0 cells due to too less input read pairs (< 1)
+Skip 1 cells due to too large input read pairs (> 6000000)
+############################################################
+IF YOU USE QSUB ON GALE: 
+All snakemake commands need to be executed were included in /gpfs/home/asun/jin_lab/yap/pipeline2_yap_r/yap_demultiplex/snakemake/qsub/qsub.sh
+You just need to qsub this script to map the whole library in /gpfs/home/asun/jin_lab/yap/pipeline2_yap_r/yap_demultiplex
+You can also change the per job parameters in /gpfs/home/asun/jin_lab/yap/pipeline2_yap_r/yap_demultiplex/snakemake/qsub/snakemake_cmd.txt or change the global parameters in /gpfs/home/asun/jin_lab/yap/pipeline2_yap_r/yap_demultiplex/snakemake/qsub/qsub.sh
+Read 'yap qsub -h' if you want to have more options about sbatch. Alternatively, you can sbatch the commands in /gpfs/home/asun/jin_lab/yap/pipeline2_yap_r/yap_demultiplex/snakemake/qsub/snakemake_cmd.txt by yourself, as long as they all get successfully executed.
+############################################################
+
+########################################
+For running jobs on the STAMPEDE2 normal queue:
+All snakemake commands need to be executed were included in /gpfs/home/asun/jin_lab/yap/pipeline2_yap_r/yap_demultiplex/snakemake/sbatch/sbatch-normal-queue.sh
+You just need to run this script to map the whole library in /gpfs/home/asun/jin_lab/yap/pipeline2_yap_r/yap_demultiplex. Note that this script will not return until all the mapping job finished. So you better run this script with nohup or in a screen.
+You can also change the per job parameters in /gpfs/home/asun/jin_lab/yap/pipeline2_yap_r/yap_demultiplex/snakemake/sbatch/snakemake_normal_cmd.txt or change the global parameters in /gpfs/home/asun/jin_lab/yap/pipeline2_yap_r/yap_demultiplex/snakemake/sbatch/sbatch-normal-queue.sh
+Read 'yap sbatch -h' if you want to have more options about sbatch. Alternatively, you can sbatch the commands in /gpfs/home/asun/jin_lab/yap/pipeline2_yap_r/yap_demultiplex/snakemake/sbatch/sbatch.sh by yourself, as long as they all get successfully executed.
+########################################
+
+########################################
+For running jobs on the STAMPEDE2 skx-normal queue:
+All snakemake commands need to be executed were included in /gpfs/home/asun/jin_lab/yap/pipeline2_yap_r/yap_demultiplex/snakemake/sbatch/sbatch-skx-normal-queue.sh
+You just need to run this script to map the whole library in /gpfs/home/asun/jin_lab/yap/pipeline2_yap_r/yap_demultiplex. Note that this script will not return until all the mapping job finished. So you better run this script with nohup or in a screen.
+You can also change the per job parameters in /gpfs/home/asun/jin_lab/yap/pipeline2_yap_r/yap_demultiplex/snakemake/sbatch/snakemake_skx-normal_cmd.txt or change the global parameters in /gpfs/home/asun/jin_lab/yap/pipeline2_yap_r/yap_demultiplex/snakemake/sbatch/sbatch-skx-normal-queue.sh
+Read 'yap sbatch -h' if you want to have more options about sbatch. Alternatively, you can sbatch the commands in /gpfs/home/asun/jin_lab/yap/pipeline2_yap_r/yap_demultiplex/snakemake/sbatch/sbatch.sh by yourself, as long as they all get successfully executed.
+########################################
+
+########################################
+For running jobs on the STAMPEDE2 shared queue:
+All snakemake commands need to be executed were included in /gpfs/home/asun/jin_lab/yap/pipeline2_yap_r/yap_demultiplex/snakemake/sbatch/sbatch-shared-queue.sh
+You just need to run this script to map the whole library in /gpfs/home/asun/jin_lab/yap/pipeline2_yap_r/yap_demultiplex. Note that this script will not return until all the mapping job finished. So you better run this script with nohup or in a screen.
+You can also change the per job parameters in /gpfs/home/asun/jin_lab/yap/pipeline2_yap_r/yap_demultiplex/snakemake/sbatch/snakemake_shared_cmd.txt or change the global parameters in /gpfs/home/asun/jin_lab/yap/pipeline2_yap_r/yap_demultiplex/snakemake/sbatch/sbatch-shared-queue.sh
+Read 'yap sbatch -h' if you want to have more options about sbatch. Alternatively, you can sbatch the commands in /gpfs/home/asun/jin_lab/yap/pipeline2_yap_r/yap_demultiplex/snakemake/sbatch/sbatch.sh by yourself, as long as they all get successfully executed.
+########################################
+
+Once all commands are executed successfully, use 'yap summary' to generate final mapping summary.

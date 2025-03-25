@@ -36,4 +36,4 @@ __pycache__/
 
 # Specific to YAP
 **/yap_demultiplex
-
+all_rna_readnames.txt
