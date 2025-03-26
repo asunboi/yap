@@ -3,6 +3,19 @@
 [https://lh3.github.io/2017/11/13/which-human-reference-genome-to-use]  
 [https://www.encodeproject.org/data-standards/reference-sequences/]  
 
+# 03/25/25
+Ran Cassie's R plate.  
+
+Check R2 for alignment to chr  
+[] All RNA reads in file  
+[] readnames are in BAM already  
+[] Realign with star?  
+
+For STAR bam filter, each read has a fractional coverage determined by mch / cov. If ref:read base is G:G, mch and cov += 1 (unconverted, methylated), else if G:C, cov += 1 (converted). Coverage has to be higher than 3 and fraction has to be higher than 90% for the read to be considered in the final all RNA bam. This makes sense as mch and cov increase at a 1:1 ratio when the bases are not converted, and the bases should not be converted for the methyl sequences. Reference sequence is determined through MD sequence from bam file; independent of bismark.
+
+Did STAR alignment on the rna raw reads, but only 70% of them mapped and the other 30% was too short. But this should be impossible, since all of the reads were taken from the mapping set?? What I think is happening is that the raw reads contain too much nonsense sequence like TSO or R1 or some garbage that is not mapped to the genome, and therefore the read coverage is too low and it is being discarded. Planning on rerunning this with ecker trimming before alignment; not sure if this will help the R2.
+
+
 # 03/24/25
 The bedtools intersect is still not giving alignments to gene regions, just the reads that I can already intersect with (chrG).  
 I need a tool that will drag out gene specific alignments.  
