@@ -25,7 +25,7 @@ STAR --runThreadN 16 \
 --alignIntronMin 20 \
 --alignIntronMax 1000000 \
 --alignMatesGapMax 1000000 \
---outFileNamePrefix /gpfs/home/asun/jin_lab/yap/pipeline3_bc_troubleshoot/all_rna_r2 \
---readFilesIn /gpfs/home/asun/jin_lab/yap/pipeline3_bc_troubleshoot/all_rna_r2.fq \
+--outFileNamePrefix /gpfs/home/asun/jin_lab/yap/pipeline3_bc_troubleshoot/star_run_trimmed/all_rna_r2 \
+--readFilesIn /gpfs/home/asun/jin_lab/yap/pipeline3_bc_troubleshoot/all_rna_r2.trimmed.fq \
 --outReadsUnmapped Fastx \
 -cd

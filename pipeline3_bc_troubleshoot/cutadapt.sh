@@ -3,6 +3,7 @@
 # read 1 ecker trimming 
 cutadapt -j 16 -u 6 all_rna_r1.fq | \
 cutadapt \
+    -j 16 \
     -a R1Adapter=AGATCGGAAGAGCACACGTCTGAAC \
     -a TSO=AAGCAGTGGTATCAACGCAGAGTGAATGG \
     -a N6=AAGCAGTGGTATCAACGCAGAGTAC \
@@ -19,6 +20,7 @@ cutadapt \
     - \
     2> all_rna_r1.stats | \
 cutadapt \
+    -j 16 \
     --report=minimal \
     -O 6 \
     -q 20 \
@@ -26,11 +28,11 @@ cutadapt \
     -u -10 \
     -m 30 \
     -o all_rna_r1.trimmed.fq \
-    - \
-    >> all_rna_r1.trimmed.stats
+    - >> all_rna_r1.trimmed.stats
 
 # read 2 ecker trimming
 cutadapt \
+    -j 16 \
     -a R1Adapter=AGATCGGAAGAGCGTCGTGTAGGGA \
     -a TSO=AAGCAGTGGTATCAACGCAGAGTGAATGG \
     -a N6=AAGCAGTGGTATCAACGCAGAGTAC \
@@ -47,6 +49,7 @@ cutadapt \
     all_rna_r2.fq \
     2> all_rna_r2.stats | \
 cutadapt \
+    -j 16 \
     --report=minimal \
     -O 6 \
     -q 20 \
@@ -54,5 +57,4 @@ cutadapt \
     -u -10 \
     -m 30 \
     -o all_rna_r2.trimmed.fq \
-    - \
-    >> all_rna_r2.trimmed.stats
+    - >> all_rna_r2.trimmed.stats
