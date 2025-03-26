@@ -3,6 +3,10 @@
 [https://lh3.github.io/2017/11/13/which-human-reference-genome-to-use]  
 [https://www.encodeproject.org/data-standards/reference-sequences/]  
 
+# 03/26/25
+Yap Summary on R plate; RNA mapping quality across all wells looks way poorer than the amplified plates. No hits on Foxg1; Can look into alignment but I would predict that we get nothing. Less than 10% mapping.  
+
+
 # 03/25/25
 Ran Cassie's R plate.  
 
