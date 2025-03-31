@@ -1,0 +1,3 @@
+/gpfs/home/asun/jin_lab/yap/raw_data/0328_iseq/TEST-iseq0328-1-A1_ii1_L001_R1_ii2.fq.gz /gpfs/home/asun/jin_lab/yap/raw_data/0328_iseq/TEST-iseq0328-1-A1_ii1_L001_R2_ii2.fq.gz
+/gpfs/home/asun/jin_lab/yap/pipeline2_yap_iseq0328/yap_demultiplex
+/gpfs/home/asun/jin_lab/yap/pipeline2_yap_iseq0328/mct_config.ini

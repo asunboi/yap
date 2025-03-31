@@ -3,6 +3,10 @@
 [https://lh3.github.io/2017/11/13/which-human-reference-genome-to-use]  
 [https://www.encodeproject.org/data-standards/reference-sequences/]  
 
+# 03/31/25
+Running 0328 iseq through ecker lab pipeline.
+
+
 # 03/27/25
 Edited runall script for Cassie.
 

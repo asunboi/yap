@@ -1,0 +1,1 @@
+/gpfs/home/asun/jin_lab/yap/src/get_rna_reads.sh
