@@ -1,0 +1,4 @@
+demultiplex:
+  fastq_pattern: /gpfs/home/asun/jin_lab/yap/raw_data/0328_iseq/*.fq.gz
+  output_dir: /gpfs/home/asun/jin_lab/yap/pipeline2_yap_iseq0328/yap_demultiplex
+  config_path: /gpfs/home/asun/jin_lab/yap/pipeline2_yap_iseq0328/mct_config.ini

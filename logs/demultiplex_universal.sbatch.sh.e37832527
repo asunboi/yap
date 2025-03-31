@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/gpfs/home/asun/miniforge3/envs/yap/bin/yap", line 8, in <module>
+    sys.exit(main())
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/__main__.py", line 864, in main
+    func(**args_vars)
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/demultiplex/demultiplex.py", line 454, in demultiplex_pipeline
+    demultiplex_version = _demultiplex(fastq_pattern=fastq_pattern,
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/demultiplex/demultiplex.py", line 51, in _demultiplex
+    if (barcode_version == 'V2') and (fastq_df['multiplex_group'].unique().size == 1):
+TypeError: 'NoneType' object is not subscriptable

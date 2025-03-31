@@ -1,0 +1,11 @@
+/var/spool/slurm/d/job37832295/slurm_script: line 13: yq: command not found
+/var/spool/slurm/d/job37832295/slurm_script: line 14: yq: command not found
+/var/spool/slurm/d/job37832295/slurm_script: line 15: yq: command not found
+Traceback (most recent call last):
+  File "/gpfs/home/asun/miniforge3/envs/yap/bin/yap", line 8, in <module>
+    sys.exit(main())
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/__main__.py", line 864, in main
+    func(**args_vars)
+  File "/gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/demultiplex/demultiplex.py", line 436, in demultiplex_pipeline
+    raise FileExistsError(
+FileExistsError: output_dir already exists, to prevent conflicts, use another output_dir or delete the existing output_dir first.

@@ -3,9 +3,15 @@
 [https://lh3.github.io/2017/11/13/which-human-reference-genome-to-use]  
 [https://www.encodeproject.org/data-standards/reference-sequences/]  
 
+# 03/27/25
+Edited runall script for Cassie.
+
 # 03/26/25
 Yap Summary on R plate; RNA mapping quality across all wells looks way poorer than the amplified plates. No hits on Foxg1; Can look into alignment but I would predict that we get nothing. Less than 10% mapping.  
 
+Trimmed and aligned R1/2 with ecker trimming standards, both reads mapping at >90% now. Extracted alignment to chrG, and then tested to see if R2 found grna that R1 missed. Only 1 extra read was identified, with a 4bp overlap with the protospacer (not very significant).  
+Since this is the case, we will treat R1 as identifying the majority of gRNA sequences.  
+Extracted raw R1/2 that aligned to protospacer sequences, send the file paths to cassie.  
 
 # 03/25/25
 Ran Cassie's R plate.  
