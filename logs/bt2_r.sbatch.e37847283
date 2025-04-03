@@ -1,0 +1,21 @@
+110333671 reads; of these:
+  110333671 (100.00%) were paired; of these:
+    96906447 (87.83%) aligned concordantly 0 times
+    7605655 (6.89%) aligned concordantly exactly 1 time
+    5821569 (5.28%) aligned concordantly >1 times
+    ----
+    96906447 pairs aligned concordantly 0 times; of these:
+      1209552 (1.25%) aligned discordantly 1 time
+    ----
+    95696895 pairs aligned 0 times concordantly or discordantly; of these:
+      191393790 mates make up the pairs; of these:
+        171073902 (89.38%) aligned 0 times
+        6853908 (3.58%) aligned exactly 1 time
+        13465980 (7.04%) aligned >1 times
+22.47% overall alignment rate
+***** WARNING: File local.bam has inconsistent naming convention for record:
+chr12	4252406	4252458	lh00134:653:22MKYCLT4:3:1101:3985:1042/1	22	-
+
+***** WARNING: File local.bam has inconsistent naming convention for record:
+chr12	4252406	4252458	lh00134:653:22MKYCLT4:3:1101:3985:1042/1	22	-
+

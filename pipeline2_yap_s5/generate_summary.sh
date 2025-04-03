@@ -1,3 +1,3 @@
 #!/bin/bash
 
-yap summary -o ./yap_demultiplex
+yap summary -o ./yap_demultiplex -m mct
