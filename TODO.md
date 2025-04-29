@@ -3,6 +3,11 @@
 [https://lh3.github.io/2017/11/13/which-human-reference-genome-to-use]  
 [https://www.encodeproject.org/data-standards/reference-sequences/]  
 
+# 04/10/25
+Removing a couple of symlinks from the home directories.
+cemba_data -> /gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/
+demultiplex -> /gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/demultiplex
+
 # 03/31/25
 Running 0328 iseq through ecker lab pipeline.
 
