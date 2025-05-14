@@ -3,6 +3,11 @@
 [https://lh3.github.io/2017/11/13/which-human-reference-genome-to-use]  
 [https://www.encodeproject.org/data-standards/reference-sequences/]  
 
+# 05/14/25
+Made a folder for grna visualization in plate and the accompanying notebook. It looks like our results are still different from the ones in the ecker lab, so i'm wondering where the disparity is from? 
+
+I checked any changes I made to the pipeline, but the changes to cemba_data/files/smk/bismark/mct.smk were only made after the iseq run, so the R, S5 and S10 plates are all using default mct settings.
+
 # 04/10/25
 Removing a couple of symlinks from the home directories.
 cemba_data -> /gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/
@@ -10,6 +15,11 @@ demultiplex -> /gpfs/home/asun/miniforge3/envs/yap/lib/python3.8/site-packages/c
 
 # 03/31/25
 Running 0328 iseq through ecker lab pipeline.
+
+pipeline2_yap_iseq0328
+Pipeline 2 Yap iseq0328: running ecker lab pipeline on March 28 iSeq experiment, detected gRNA through grep based methods but no alignment through ecker pipeline.
+
+Pipeline 2 Yap iseq0328 Run 2: Modified ecker lab trimming in cemba_data/files/smk/bismark/mct.smk to remove TSO trimming since some of our gRNA was downstream of the TSO trimming. Running ecker lab pipeline on March 28 iSeq experiment, detected gRNA through grep based methods but no alignment through ecker pipeline still.
 
 # 03/27/25
 Edited runall script for Cassie.
