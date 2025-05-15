@@ -3,6 +3,12 @@
 [https://lh3.github.io/2017/11/13/which-human-reference-genome-to-use]  
 [https://www.encodeproject.org/data-standards/reference-sequences/]  
 
+# 05/15/25
+Looking into why the results from Cassie's hand annotated well visualization were different from my current plot_on_plate visualization, especially given the fact that we ran the same code. The issue mainly lies in the fact that when I was iterating through processing.ipynb, the original dataframe did not account for the fact that while bowtie2 gives the full sequence, if the read is aligned in RC, the read given will also be RC. Therefore when I was originally using the first 8bp to check for well identity, it was using the wrong orientation for some reads. This was what was produced in local_align.tsv, and corrected in local_align_extra.tsv. The issue was that while we got more hits in local_align_extra.tsv, some of the reverse sequences in local_align.tsv just happened to map to wells and then their real forward read was mapped to a different well, but that was unaccounted for when Cassie manually annotated wells.
+
+Created a local_visualization.ipynb notebook specificially for modular visualization of our gRNA.
+
+
 # 05/14/25
 [] Need to convert EMBL gene names to regular names for search purposes.
 
