@@ -4,9 +4,22 @@
 [https://www.encodeproject.org/data-standards/reference-sequences/]  
 
 # 05/14/25
+[] Need to convert EMBL gene names to regular names for search purposes.
+
 Made a folder for grna visualization in plate and the accompanying notebook. It looks like our results are still different from the ones in the ecker lab, so i'm wondering where the disparity is from? 
 
 I checked any changes I made to the pipeline, but the changes to cemba_data/files/smk/bismark/mct.smk were only made after the iseq run, so the R, S5 and S10 plates are all using default mct settings.
+
+Started off by joining TotalRNA.h5 with mapping summary and visualizing the STAR identified guide RNA. 
+Since we are using the ENCODE reference genome, our genes are named using ensembl id and not gene symbol. Then, to make the dataframe more accessible there needs to be a mapping from ensembl id to gene name. 
+This can be done with mygene, developed by the Wu & Su labs (surprising)! A couple of caveats, the ensembl id has to be processed to use a non-versioned gene ID, for example ENSMUSG00000118388 instead of ENSMUSG00000118388.1. There also seems to be a endpoint time limit, so I am not sure I can put the full gene list in for processing. The dataframe format as output is also better than the JSON for further parsing.
+Cassie said that this is not an immediate need, so putting this on the backlog for now.
+Focusing on local alignment visualization. Took the dataframe code from the tsv generation notebook and transformed it into a well x grna matrix. 
+Originally pd.merge joined with inner merge, so only 28 wells were displayed. Changed to using merge on left, but then no wells showed any expression. Trying to figure this out; there is a distinct difference when visualizing the dataset with only 28 wells vs 384. 
+Looking at the plot on plate code in /gpfs/home/asun/jin_lab/yap/cemba_data/mapping/stats/plot.py. 
+Found out that the issue lies in the distplot_and_plate_view function, where vmin and vmax is derived from cutoff_vs_cell_remain. cutoff_vs_cell_remain has outlier removal, taking the 0.01 to 0.99 quantile. Since our grna matrix is so sparse, with only ~30 of wells containing grna out of 384, all our well values are considered outliers. 
+Made a new function test_xlim to use only the plot_on_plate function call with vmin as 0 and vmax as the maximum amount of grna seen. 
+Added a new column Total_grna to visualize all wells with non-zero grna expression.
 
 # 04/10/25
 Removing a couple of symlinks from the home directories.
