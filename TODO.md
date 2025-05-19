@@ -3,6 +3,26 @@
 [https://lh3.github.io/2017/11/13/which-human-reference-genome-to-use]  
 [https://www.encodeproject.org/data-standards/reference-sequences/]  
 
+# 05/19/25
+[] look into modification of BT2 parameters for more lenient matching of reads
+[] give false positive (reads that align to end of scaffold + start of grna) and false negative (reads that are discarded by STAR but picked up by BT2) examples to ecker lab bioinfo  
+[] add gene name conversion to global_visualization.ipynb (eventually)
+
+Ran visualization for STAR / global aligned reads again but with 0 as a clear well. Refactored global visualization into a global_visualization.ipynb.  
+
+Checked differences between STAR and BT2  
+
+STAR  
+- align over L 66%  
+- match over L 66%  
+- map over L 4%  
+- multimap 20  
+
+BT2  
+- ~30 bp of the read has to align given 150bp read length and local alignment score of 20 + 8 * ln(readlen)  
+- highest scoring read is reported, this can change with parameter k to report k highest scoring reads  
+
+
 # 05/15/25
 Looking into why the results from Cassie's hand annotated well visualization were different from my current plot_on_plate visualization, especially given the fact that we ran the same code. The issue mainly lies in the fact that when I was iterating through processing.ipynb, the original dataframe did not account for the fact that while bowtie2 gives the full sequence, if the read is aligned in RC, the read given will also be RC. Therefore when I was originally using the first 8bp to check for well identity, it was using the wrong orientation for some reads. This was what was produced in local_align.tsv, and corrected in local_align_extra.tsv. The issue was that while we got more hits in local_align_extra.tsv, some of the reverse sequences in local_align.tsv just happened to map to wells and then their real forward read was mapped to a different well, but that was unaccounted for when Cassie manually annotated wells.
 
