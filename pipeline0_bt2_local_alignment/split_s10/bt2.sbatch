@@ -21,4 +21,4 @@ bowtie2 \
 samtools view -Sb local.sam -o local.bam
 bedtools intersect -F 0.5 -a local.bam -b /gpfs/home/asun/jin_lab/yap/raw_data/ref_w_split_chrG/build/chrG.bed > intersect.bam
 
-bedtools intersect -F 0.5 -a TotalAlignedChrG.rna_reads.sam -b /gpfs/home/asun/jin_lab/yap/raw_data/ref_w_chrG/build/chrG.bed > intersect_filter.sam
+# bedtools intersect -F 0.5 -a TotalAlignedChrG.rna_reads.sam -b /gpfs/home/asun/jin_lab/yap/raw_data/ref_w_chrG/build/chrG.bed > intersect_filter.sam

@@ -3,6 +3,9 @@
 [https://lh3.github.io/2017/11/13/which-human-reference-genome-to-use]  
 [https://www.encodeproject.org/data-standards/reference-sequences/]  
 
+# 05/22/25
+
+
 # 05/19/25
 [] look into modification of BT2 parameters for more lenient matching of reads
 [] give false positive (reads that align to end of scaffold + start of grna) and false negative (reads that are discarded by STAR but picked up by BT2) examples to ecker lab bioinfo  

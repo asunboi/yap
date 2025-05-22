@@ -7,3 +7,6 @@ Split refers to using mm10_no_alt_ENCODE_chrL_chrG.fa with split decoy sequences
 In each of the folders there will be a variant of a script named bt2_X.sbatch, submitted by `sbatch bt2_X.sbatch`. The only thing necessary to change for personal use is -1 and -2 paths, where -1 is the forward read file and -2 is the reverse read file. 
 
 Follow up analysis can be done with notebooks/processing.ipynb. 
+
+readnames.txt contains the 112 unique reads that have grna detected.
+readnames_no_null_wells.txt contains 96 reads that have grna and are assigned to a well.
