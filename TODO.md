@@ -3,8 +3,15 @@
 [https://lh3.github.io/2017/11/13/which-human-reference-genome-to-use]  
 [https://www.encodeproject.org/data-standards/reference-sequences/]  
 
-# 05/22/25
-
+# 06/10/26
+I want to find the file that creates sbatch-shared-queue.sh, so that I can change the time_str default for all future scripts.  
+The sh file is generated from the demultiplex step, so I go looking into cemba data and look at the individual initialization files first. No good.  
+I then look at the demultiplex script. I see that the outputdir / 'snakemake' / ... contains a function called make_snakefile, which is imported from ..mapping pipelines.  
+Not in mct.py, so I look at _init_.py  
+Ctrl-F, looking for sbatch-  
+Find function called prepare_sbatch that initializes the arguments for the sh script.  
+/gpfs/home/cwhite/miniforge3/envs/yap/lib/python3.8/site-packages/cemba_data/mapping/pipelines/__init__.py  
+change time_str to 240:00:00 under `elif mode.split('-')[0] == 'mct':`  
 
 # 05/19/25
 [] look into modification of BT2 parameters for more lenient matching of reads
