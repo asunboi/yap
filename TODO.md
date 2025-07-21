@@ -3,7 +3,67 @@
 [https://lh3.github.io/2017/11/13/which-human-reference-genome-to-use]  
 [https://www.encodeproject.org/data-standards/reference-sequences/]  
 
-# 06/10/26
+# 07/15/25
+- [ ] unify processing and visualization pipelines 
+- [ ] filter out reads with primers that are not part of library prep
+
+```
+input:
+		r1_in = f'{raw_dir}/{uid}+{lane}+R1.fq.gz',
+		r2_in = f'{raw_dir}/{uid}+{lane}+R2.fq.gz'
+	params:
+		# Note that you have to use a function to deactivate automatic wildcard expansion 
+		# in params strings, e.g., `lambda wildcards: ...`.
+		# here the r1/2_out have to have the name_str
+		r1_out = lambda wildcards: f'{lane_files_dir}/{uid}-{lane}-{name_str}-R1.fq.gz',
+		r2_out = lambda wildcards: f'{lane_files_dir}/{uid}-{lane}-{name_str}-R2.fq.gz'
+	output:
+		stats_out = '{lane_files_dir}/{uid}-{lane}.demultiplex.stats.txt'
+	shell:
+		"cutadapt -Z -e 0.01 --no-indels -g file:{random_index_fasta_path} "
+		"-o {{params.r1_out}} -p {{params.r2_out}} {{input.r1_in}} {{input.r2_in}} > {{output.stats_out}}"
+
+PACKAGE_DIR = pathlib.Path(cemba_data.__path__[0])
+elif barcode_version == 'V2':
+			multiplex_group = uid.split('-')[-2]
+			random_index_fasta_path = str(
+				PACKAGE_DIR / 'files/random_index_v2/'
+							  f'random_index_v2.multiplex_group_{multiplex_group}.fa')
+```
+
+cassie wants to integrate processing.ipynb with local_visualization.ipynb
+moved into local vis
+```
+%%bash
+samtools view intersect.bam | cut -f1 | sort -u > readnames.txt
+
+module load seqtk
+seqtk subseq /gpfs/home/asun/jin_lab/yap/raw_data/R/TEST-R-1-A1_ii1_L003_R1_ii2.fq.gz readnames.txt > grna_r1.fq
+seqtk subseq /gpfs/home/asun/jin_lab/yap/raw_data/R/TEST-R-1-A1_ii1_L003_R2_ii2.fq.gz readnames.txt > grna_r2.fq
+```
+
+a couple of failure points. currently to adapt each notebook to a new dataset, you have to
+1. change the path to local alignment folder with intersect.bam
+```
+os.chdir("/gpfs/group/jin/Cassie/250708_iSeq/vs_analysis_Dual/Lib9/S14")
+```
+2. manually identify which raw reads the intersect.bam came from, and assign names to grna_r1/r2
+3. to get sam_output, you have to replace the path in to your intersect.bam
+	1. automatically search for it given a default name 'intersect.bam' (adj) but trigger except if missing or empty
+```
+sam_output = subprocess.run(["samtools", "view", "/gpfs/group/jin/Cassie/250708_iSeq/vs_analysis_Dual/Lib9/S14/vsS14D_intersect.bam"], capture_output=True, text=True)
+```
+
+4. change the name `grna_r1.fq` in the open(grna) as fq loop to the proper one
+	1. I should probably add a warning / sanity check to see if grna_r1 is empty
+
+QOL todos
+Make it so that the plate visualization automatically adjusts to only the columns we care about. 
+change the S_10 on the top of each graph to match the plate?
+
+added a threshold (default 0) for visualization, if total_grna < threshold, remove the well
+
+# 06/10/25
 I want to find the file that creates sbatch-shared-queue.sh, so that I can change the time_str default for all future scripts.  
 The sh file is generated from the demultiplex step, so I go looking into cemba data and look at the individual initialization files first. No good.  
 I then look at the demultiplex script. I see that the outputdir / 'snakemake' / ... contains a function called make_snakefile, which is imported from ..mapping pipelines.  
