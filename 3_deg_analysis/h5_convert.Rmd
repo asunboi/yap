@@ -1,0 +1,260 @@
+---
+title: "Untitled"
+output: html_document
+date: "2025-06-02"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(rhdf5)
+library(Matrix)
+library(Seurat)
+library(SeuratObject)
+
+```
+
+```{r}
+h5file <-"~/jin_lab/yap/pipeline2_yap_s10/yap_demultiplex//TotalRNAData.h5"
+h5ls(h5file)
+```
+
+
+```{r}
+genes_data <- h5read(h5file, "data/axis0")
+head(genes_data)
+```
+
+```{r}
+cells_data <- h5read(h5file, "data/axis1")
+head(cells_data)
+```
+
+```{r}
+expr_mat<- h5read(h5file, "data/block0_values")
+H5close()
+```
+
+```{r}
+#remove decimal on ensembl id
+rownames(expr_mat) <- genes_data
+colnames(expr_mat) <- cells_data
+rownames(expr_mat) <- gsub("\\..*", "", rownames(expr_mat))
+```
+
+```{r}
+#convert ensembl id to gene symbol
+library(biomaRt)
+
+all_names <- rownames(expr_mat)
+is_ens <- grepl("^ENSMUSG", all_names)
+to_map <- all_names[is_ens]
+mouse_ensembl <- useEnsembl(
+  biomart = "genes", 
+  dataset = "mmusculus_gene_ensembl"
+)
+mapping_df <- getBM(
+  attributes = c("ensembl_gene_id", "external_gene_name"),
+  filters    = "ensembl_gene_id",
+  values     = to_map,
+  mart       = mouse_ensembl
+)
+map_vec <- setNames(mapping_df$external_gene_name,
+                    mapping_df$ensembl_gene_id)
+
+not_found <- setdiff(to_map, names(map_vec))
+
+if (length(not_found) > 0) {
+  map_vec[not_found] <- not_found
+}
+
+new_row_names <- all_names
+new_row_names[is_ens] <- map_vec[ all_names[is_ens] ]
+
+new_row_names <- make.unique(new_row_names)
+
+rownames(expr_mat) <- new_row_names
+
+```
+
+```{r}
+# filter empty rows
+# Check for empty rownames
+sum(rownames(expr_mat) == "")
+
+expr_mat <- expr_mat[rownames(expr_mat) != "", ]
+
+```
+
+```{r}
+library(Seurat)
+expr_mat <- as(expr_mat, "dgCMatrix")
+
+# Check for missing, empty, or duplicated gene names
+stopifnot(!is.null(rownames(expr_mat)))
+stopifnot(all(rownames(expr_mat) != ""))
+stopifnot(!any(is.na(rownames(expr_mat))))
+stopifnot(length(unique(rownames(expr_mat))) == nrow(expr_mat))
+
+stopifnot(!is.null(colnames(expr_mat)))
+stopifnot(all(colnames(expr_mat) != ""))
+stopifnot(!any(is.na(colnames(expr_mat))))
+stopifnot(length(unique(colnames(expr_mat))) == ncol(expr_mat))
+
+expr_mat <- expr_mat[, colnames(expr_mat) != ""]
+
+seurat_obj <- CreateSeuratObject(counts = expr_mat)
+
+```
+
+```{r}
+metadata <- read.csv("/gpfs/home/asun/jin_lab/yap/pipeline0_bt2_local_alignment/split_s10/S10_metadata_matrix.csv")
+
+library(dplyr)
+library(glue)
+
+metadata <- metadata %>%
+  mutate(SeuratIndex = glue("S-10-{MultiplexGroup}-A1-{RandomIndex}"))
+
+rownames(metadata) <- metadata$SeuratIndex
+metadata["assign_ident"]
+```
+
+```{r}
+seurat_obj
+seurat_obj[["RNA"]]
+seurat_obj <- AddMetaData(seurat_obj, metadata=metadata)
+
+"Foxg1" %in% rownames(seurat_obj)
+"Dnmt3a" %in% rownames(seurat_obj)
+"Foxg1" %in% rownames(deg_results)
+"Dnmt3a" %in% rownames(deg_results)
+
+seurat_obj <- NormalizeData(seurat_obj)
+
+seurat_obj <- FindVariableFeatures(seurat_obj, selection.method = "vst", nfeatures = 2000)
+
+all.genes <- rownames(seurat_obj)
+seurat_obj <- ScaleData(seurat_obj, features = all.genes)
+
+seurat_obj <- RunPCA(seurat_obj, features = VariableFeatures(object = seurat_obj))
+
+ElbowPlot(seurat_obj, ndims = 30)
+
+DimPlot(seurat_obj, reduction = "pca")
+DimPlot(seurat_obj, reduction = "pca", dims = c(2, 3))
+
+Idents(seurat_obj) <- "assign_ident"
+
+deg_results <- FindMarkers(seurat_obj, ident.1 = "Dnmt3a", ident.2 = "Safe")
+table(Idents(seurat_obj))
+
+deg_results$gene <- rownames(deg_results)
+
+deg_results$significant <- with(deg_results, 
+  ifelse(p_val < 0.05 & abs(avg_log2FC) > 1, "Significant", "Not significant"))
+
+genes_of_interest <- rownames(deg_results)
+
+library(clusterProfiler)
+library(org.Mm.eg.db)  # Use org.Hs.eg.db for human
+
+gene_entrez <- bitr(genes_of_interest, 
+                    fromType = "SYMBOL", 
+                    toType = "ENTREZID", 
+                    OrgDb = org.Mm.eg.db)
+
+gene_entrez
+
+ego <- enrichGO(gene = gene_entrez$ENTREZID,
+                OrgDb = org.Mm.eg.db,
+                ont = "BP",  # "BP", "MF", or "CC"
+                pAdjustMethod = "BH",
+                pvalueCutoff = 0.05,
+                qvalueCutoff = 0.2,
+                readable = TRUE)
+
+# Barplot
+barplot(ego, showCategory = 10, font.size = 10)
+
+# Dotplot
+dotplot(ego, showCategory = 10, font.size = 8)
+
+# Enrichment Map
+emapplot(pairwise_termsim(ego))
+
+table(deg_results$significant)
+
+library(ggplot2)
+
+# thresholds
+logfc_cutoff <- 1
+pval_cutoff <- 0.05
+
+library(ggrepel)
+
+# Create volcano plot
+ggplot(deg_results, aes(x = avg_log2FC, y = -log10(p_val))) +
+  geom_point(aes(color = significant), alpha = 0.7) +
+  
+  # Add vertical lines for logFC thresholds
+  geom_vline(xintercept = c(-logfc_cutoff, logfc_cutoff), 
+             linetype = "dashed", color = "blue") +
+  
+  # Add horizontal line for p-value threshold
+  geom_hline(yintercept = -log10(pval_cutoff), 
+             linetype = "dashed", color = "darkgreen") +
+
+  # Highlight Foxg1
+  geom_point(data = deg_results["Dnmt3a", , drop = FALSE],
+             aes(x = avg_log2FC, y = -log10(p_val)),
+             color = "black", size = 3) +
+  geom_text_repel(data = deg_results["Dnmt3a", , drop = FALSE],
+                  aes(x = avg_log2FC, y = -log10(p_val), label = "Dnmt3a"),
+                  size = 4, color = "black", max.overlaps = Inf) +
+  
+  scale_color_manual(values = c("gray", "red")) +
+  theme_minimal() +
+  labs(
+    title = "Dnmt3a vs Safe Target DEG",
+    x = "Log2 Fold Change",
+    y = "-Log10 Adjusted P-Value"
+  )
+
+# Create volcano plot
+ggplot(deg_results, aes(x = avg_log2FC, y = -log10(p_val))) +
+  geom_point(aes(color = significant), alpha = 0.7) +
+  
+  # Add vertical lines for logFC thresholds
+  geom_vline(xintercept = c(-logfc_cutoff, logfc_cutoff), 
+             linetype = "dashed", color = "blue") +
+  
+  # Add horizontal line for p-value threshold
+  geom_hline(yintercept = -log10(pval_cutoff), 
+             linetype = "dashed", color = "darkgreen") +
+  
+  scale_color_manual(values = c("gray", "red")) +
+  theme_minimal() +
+  labs(
+    title = "Foxg1 vs Safe Target DEG",
+    x = "Log2 Fold Change",
+    y = "-Log10 Adjusted P-Value"
+  )
+
+head(perturb.de.markers)
+
+genes_to_remove <- c("Dnmt3a-g1","Dnmt3a-g2","Foxg1-g1","Foxg1-g2","Safe-g1","Safe-g2")  # replace with your gene names
+
+# Subset the Seurat object to remove them
+seurat_obj <- subset(seurat_obj, features = setdiff(rownames(seurat_obj), genes_to_remove))
+```
+```{r}
+Idents(seurat_obj)["Safe"]
+subset_obj <- subset(seurat_obj, idents = c("Safe", "Dnmt3a"))
+head(subset_obj@meta.data)
+```
+
+
+
